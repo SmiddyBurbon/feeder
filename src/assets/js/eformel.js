@@ -27,6 +27,8 @@ export function getCountry(city) {
   else if (country.includes("buenos")) { return "ar"; }
   else if (country.includes("vancouver")) { return "ca"; }
   else if (country.includes("eindhoven")) { return "nl"; }
+  else if (country.includes("kapstadt")) { return "za"; }
+  else if (country.includes("cape town")) { return "za"; }
   else if (country.includes("desert")) { return "sa"; }
   else if (country.includes("ocean")) { return "sg"; }
   else if (country.includes("arctic")) { return "gr"; }

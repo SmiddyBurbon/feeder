@@ -8,44 +8,12 @@
     "fullTeam": "Envision Virgin Racing"
   },
   {
-    "number": 5,
-    "name": "Stoffel Vandoorne",
-    "tla": "VAN",
-    "nationality": "be",
-    "team": "mercedes",
-    "fullTeam": "Mercedes-EQ Formula E Team"
-  },
-  {
-    "number": 6,
-    "name": "Nico Müller",
-    "tla": "MUL",
-    "nationality": "ch",
-    "team": "dragon",
-    "fullTeam": "Dragon / Penske Autosport"
-  },
-  {
-    "number": 6,
-    "name": "Joel Eriksson",
-    "tla": "ERI",
-    "nationality": "se",
-    "team": "dragon",
-    "fullTeam": "Dragon / Penske Autosport"
-  },
-  {
-    "number": 7,
-    "name": "Sergio Sette Camara",
-    "tla": "SET",
-    "nationality": "br",
-    "team": "dragon",
-    "fullTeam": "Dragon / Penske Autosport"
-  },
-  {
-    "number": 8,
-    "name": "Oliver Turvey",
-    "tla": "TUR",
-    "nationality": "uk",
-    "team": "nio",
-    "fullTeam": "NIO 333"
+    "number": 37,
+    "name": "Nick Cassidy",
+    "tla": "CAS",
+    "nationality": "nz",
+    "team": "virgin",
+    "fullTeam": "Envision Virgin Racing"
   },
   {
     "number": 10,
@@ -54,30 +22,6 @@
     "nationality": "uk",
     "team": "jaguar",
     "fullTeam": "Jaguar Racing"
-  },
-  {
-    "number": 11,
-    "name": "Lucas di Grassi",
-    "tla": "DIG",
-    "nationality": "br",
-    "team": "audi",
-    "fullTeam": "Audi Sport ABT Schaeffler"
-  },
-  {
-    "number": 13,
-    "name": "Antonio Felix da Costa",
-    "tla": "DAC",
-    "nationality": "pt",
-    "team": "techeetah",
-    "fullTeam": "DS Techeetah"
-  },
-  {
-    "number": 17,
-    "name": "Nyck de Vries",
-    "tla": "DEV",
-    "nationality": "nl",
-    "team": "mercedes",
-    "fullTeam": "Mercedes-EQ Formula E Team"
   },
   {
     "number": 20,
@@ -92,40 +36,8 @@
     "name": "Oliver Rowland",
     "tla": "ROW",
     "nationality": "uk",
-    "team": "nissan",
-    "fullTeam": "Nissan e.dams"
-  },
-  {
-    "number": 23,
-    "name": "Sebastien Buemi",
-    "tla": "BUE",
-    "nationality": "ch",
-    "team": "nissan",
-    "fullTeam": "Nissan e.dams"
-  },
-  {
-    "number": 25,
-    "name": "Jean-Eric Vergne",
-    "tla": "JEV",
-    "nationality": "fr",
-    "team": "techeetah",
-    "fullTeam": "DS Techeetah"
-  },
-  {
-    "number": 27,
-    "name": "Jake Dennis",
-    "tla": "DEN",
-    "nationality": "uk",
-    "team": "bmw",
-    "fullTeam": "BMW i Andretti Motorsport"
-  },
-  {
-    "number": 28,
-    "name": "Maximilian Günther",
-    "tla": "GUN",
-    "nationality": "de",
-    "team": "bmw",
-    "fullTeam": "BMW i Andretti Motorsport"
+    "team": "mahindra",
+    "fullTeam": "Mahindra Racing"
   },
   {
     "number": 29,
@@ -136,12 +48,36 @@
     "fullTeam": "Mahindra Racing"
   },
   {
-    "number": 33,
-    "name": "Rene Rast",
-    "tla": "RAS",
+    "number": 23,
+    "name": "Sebastien Buemi",
+    "tla": "BUE",
+    "nationality": "ch",
+    "team": "nissan",
+    "fullTeam": "Nissan e.dams"
+  },
+  {
+    "number": 28,
+    "name": "Maximilian Günther",
+    "tla": "GUE",
     "nationality": "de",
-    "team": "audi",
-    "fullTeam": "Audi Sport ABT Schaeffler"
+    "team": "nissan",
+    "fullTeam": "Nissan e.dams"
+  },
+  {
+    "number": 27,
+    "name": "Jake Dennis",
+    "tla": "DEN",
+    "nationality": "uk",
+    "team": "andretti",
+    "fullTeam": "Andretti Autosport"
+  },
+  {
+    "number": 0,
+    "name": "Firstname Lastname",
+    "tla": "TLA",
+    "nationality": "uk",
+    "team": "andretti",
+    "fullTeam": "Andretti Autosport"
   },
   {
     "number": 36,
@@ -152,12 +88,20 @@
     "fullTeam": "TAG Heuer Porsche"
   },
   {
-    "number": 37,
-    "name": "Nick Cassidy",
-    "tla": "CAS",
-    "nationality": "nz",
-    "team": "virgin",
-    "fullTeam": "Envision Virgin Racing"
+    "number": 99,
+    "name": "Pascal Wehrlein",
+    "tla": "WEH",
+    "nationality": "de",
+    "team": "porsche",
+    "fullTeam": "TAG Heuer Porsche"
+  },
+  {
+    "number": 11,
+    "name": "Lucas di Grassi",
+    "tla": "DIG",
+    "nationality": "br",
+    "team": "venturi",
+    "fullTeam": "ROKiT Venturi Racing"
   },
   {
     "number": 48,
@@ -168,44 +112,68 @@
     "fullTeam": "ROKiT Venturi Racing"
   },
   {
-    "number": 71,
-    "name": "Norman Nato",
-    "tla": "NAT",
-    "nationality": "fr",
-    "team": "venturi",
-    "fullTeam": "ROKiT Venturi Racing"
+    "number": 0,
+    "name": "Dragon One",
+    "tla": "DRA",
+    "nationality": "uk",
+    "team": "dragon",
+    "fullTeam": "Dragon / Penske Autosport"
   },
   {
-    "number": 88,
-    "name": "Tom Blomqvist",
-    "tla": "BLO",
+    "number": 0,
+    "name": "Dragon Two",
+    "tla": "DRG",
+    "nationality": "uk",
+    "team": "dragon",
+    "fullTeam": "Dragon / Penske Autosport"
+  },
+  {
+    "number": 0,
+    "name": "DS One",
+    "tla": "DS1",
+    "nationality": "uk",
+    "team": "techeetah",
+    "fullTeam": "DS Techeetah"
+  },
+  {
+    "number": 0,
+    "name": "DS Two",
+    "tla": "DS2",
+    "nationality": "uk",
+    "team": "techeetah",
+    "fullTeam": "DS Techeetah"
+  },
+  {
+    "number": 0,
+    "name": "Mercedes One",
+    "tla": "MB1",
+    "nationality": "uk",
+    "team": "mercedes",
+    "fullTeam": "Mercedes-EQ Formula E Team"
+  },
+  {
+    "number": 0,
+    "name": "Mercedes Two",
+    "tla": "MB2",
+    "nationality": "uk",
+    "team": "mercedes",
+    "fullTeam": "Mercedes-EQ Formula E Team"
+  },
+  {
+    "number": 3,
+    "name": "NIO One",
+    "tla": "NI1",
     "nationality": "uk",
     "team": "nio",
     "fullTeam": "NIO 333"
   },
   {
-    "number": 94,
-    "name": "Alex Lynn",
-    "tla": "LYN",
+    "number": 33,
+    "name": "NIO Two",
+    "tla": "NI2",
     "nationality": "uk",
-    "team": "mahindra",
-    "fullTeam": "Mahindra Racing"
-  },
-  {
-    "number": 99,
-    "name": "Pascal Wehrlein",
-    "tla": "WEH",
-    "nationality": "de",
-    "team": "porsche",
-    "fullTeam": "TAG Heuer Porsche"
-  },
-  {
-    "number": 0,
-    "name": "Audi Sport Abt Schaeffler",
-    "tla": "audi",
-    "nationality": "audi",
-    "team": "audi",
-    "fullTeam": "Audi Sport Abt Schaeffler"
+    "team": "nio",
+    "fullTeam": "NIO 333"
   },
   {
     "number": 0,
@@ -225,11 +193,11 @@
   },
   {
     "number": 0,
-    "name": "BMW i Andretti Motorsport",
-    "tla": "bmw",
-    "nationality": "bmw",
-    "team": "bmw",
-    "fullTeam": "BMW i Andretti Motorsport"
+    "name": "Andretti Autosport",
+    "tla": "andretti",
+    "nationality": "andretti",
+    "team": "andretti",
+    "fullTeam": "Andretti Autosport"
   },
   {
     "number": 0,
