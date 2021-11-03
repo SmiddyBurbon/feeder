@@ -4,16 +4,16 @@
     "name": "Robin Frijns",
     "tla": "FRI",
     "nationality": "nl",
-    "team": "virgin",
-    "fullTeam": "Envision Virgin Racing"
+    "team": "envision",
+    "fullTeam": "Envision Racing"
   },
   {
     "number": 37,
     "name": "Nick Cassidy",
     "tla": "CAS",
     "nationality": "nz",
-    "team": "virgin",
-    "fullTeam": "Envision Virgin Racing"
+    "team": "envision",
+    "fullTeam": "Envision Racing"
   },
   {
     "number": 10,
@@ -21,7 +21,7 @@
     "tla": "BIR",
     "nationality": "uk",
     "team": "jaguar",
-    "fullTeam": "Jaguar Racing"
+    "fullTeam": "Jaguar TCS Racing"
   },
   {
     "number": 20,
@@ -29,7 +29,7 @@
     "tla": "EVA",
     "nationality": "nz",
     "team": "jaguar",
-    "fullTeam": "Jaguar Racing"
+    "fullTeam": "Jaguar TCS Racing"
   },
   {
     "number": 22,
@@ -185,11 +185,11 @@
   },
   {
     "number": 0,
-    "name": "Jaguar Racing",
+    "name": "Jaguar TCS Racing",
     "tla": "jaguar",
     "nationality": "jaguar",
     "team": "jaguar",
-    "fullTeam": "Jaguar Racing"
+    "fullTeam": "Jaguar TCS Racing"
   },
   {
     "number": 0,
@@ -225,11 +225,11 @@
   },
   {
     "number": 0,
-    "name": "Envision Virgin Racing",
-    "tla": "virgin",
-    "nationality": "virgin",
-    "team": "virgin",
-    "fullTeam": "Envision Virgin Racing"
+    "name": "Envision Racing",
+    "tla": "envision",
+    "nationality": "envision",
+    "team": "envision",
+    "fullTeam": "Envision Racing"
   },
   {
     "number": 0,
