@@ -144,33 +144,33 @@
     "fullTeam": "DS Techeetah"
   },
   {
-    "number": 0,
-    "name": "Mercedes One",
-    "tla": "MB1",
-    "nationality": "uk",
+    "number": 5,
+    "name": "Stoffel Vandoorne",
+    "tla": "VAN",
+    "nationality": "be",
     "team": "mercedes",
     "fullTeam": "Mercedes-EQ Formula E Team"
   },
   {
-    "number": 0,
-    "name": "Mercedes Two",
-    "tla": "MB2",
-    "nationality": "uk",
+    "number": 17,
+    "name": "Nyck de Vries",
+    "tla": "DEV",
+    "nationality": "nl",
     "team": "mercedes",
     "fullTeam": "Mercedes-EQ Formula E Team"
   },
   {
     "number": 3,
-    "name": "NIO One",
-    "tla": "NI1",
+    "name": "Oliver Turvey",
+    "tla": "TUR",
     "nationality": "uk",
     "team": "nio",
     "fullTeam": "NIO 333"
   },
   {
     "number": 33,
-    "name": "NIO Two",
-    "tla": "NI2",
+    "name": "Dan Ticktum",
+    "tla": "TIC",
     "nationality": "uk",
     "team": "nio",
     "fullTeam": "NIO 333"
