@@ -113,33 +113,6 @@ export function getCountry(city) {
   else if (country.includes("makowiecki")) { return "fr"; }
   else if (country.includes("juncadella")) { return "es"; }
 
-  /*------NUMBERS------*/
-
-  else if (country == "2") { return "uk"; }
-  else if (country == "4") { return "nl"; }
-  else if (country == "3") { return "uk"; }
-  else if (country == "5") { return "be"; }
-  else if (country == "6") { return "se"; }
-  else if (country == "7") { return "ch"; }
-  else if (country == "11") { return "br"; }
-  else if (country == "13") { return "pt"; }
-  else if (country == "17") { return "nl"; }
-  else if (country == "18") { return "ch"; }
-  else if (country == "19") { return "br"; }
-  else if (country == "20") { return "nz"; }
-  else if (country == "22") { return "uk"; }
-  else if (country == "23") { return "ch"; }
-  else if (country == "25") { return "fr"; }
-  else if (country == "27") { return "uk"; }
-  else if (country == "28") { return "de"; }
-  else if (country == "33") { return "de"; }
-  else if (country == "36") { return "de"; }
-  else if (country == "48") { return "ch"; }
-  else if (country == "51") { return "uk"; }
-  else if (country == "64") { return "be"; }
-  else if (country == "66") { return "de"; }
-  else if (country == "94") { return "uk"; }
-
   /*------TEAMS------*/
 
   else if (country.includes("audi")) { return "audi"; }
