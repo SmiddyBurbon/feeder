@@ -100,7 +100,7 @@
           flags: true,
           cars: true,
           gap: true,
-          lines: 12,
+          lines: 11,
           minLines: 1,
           maxLines: 12,
           sponsor: false,
