@@ -12,137 +12,75 @@
     </div>
 
     <div class="ranking">
-      <ul class="group">
+      <div class="group">
         <div class="groupHeader">
-          <input value="Gruppe 1" type="text" />
+          <input value="Gruppe A" type="text" />
         </div>
-        <li v-for="driver in groupOne" :key="driver.index" :id="'item' + driver.index">
-          <div>
-            <div class="image-upload" v-if="options.flags">
-              <label :for="'flag-input-' + driver.index">
-                <img
-                  class="flag"
-                  :src="'img/eformel/flags/' + driver.country + '.png'"
-                />
-              </label>
-              <input :id="'flag-input-' + driver.index" type="file" @change="changeFlag(driver.index)" />
+        <ul>
+          <li v-for="driver in groupOne" :key="driver.index" :id="'item' + driver.index">
+            <div>
+              <div class="image-upload" v-if="options.flags">
+                <label :for="'flag-input-' + driver.index">
+                  <img
+                    class="flag"
+                    :src="'img/eformel/flags/' + driver.country + '.png'"
+                  />
+                </label>
+                <input :id="'flag-input-' + driver.index" type="file" @change="changeFlag(driver.index)" />
+              </div>
+              <input
+                class="name"
+                type="text"
+                placeholder="Driver / Team"
+                :value="driver.name"
+                @blur="updateName(driver.index, $event.target.value)"
+              />
             </div>
             <input
-              class="name"
+              class="team"
               type="text"
-              placeholder="Driver / Team"
-              :value="driver.name"
-              @blur="updateName(driver.index, $event.target.value)"
+              placeholder="Team"
+              :value="driver.team"
+              @blur="updateTeam(driver.index, $event.target.value)"
             />
-          </div>
-          <input
-            class="team"
-            type="text"
-            placeholder="Team"
-            :value="driver.team"
-            @blur="updateTeam(driver.index, $event.target.value)"
-          />
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
 
-      <ul class="group">
+      <div class="group">
         <div class="groupHeader">
-          <input value="Gruppe 2" type="text" />
+          <input value="Gruppe B" type="text" />
         </div>
-        <li v-for="driver in groupTwo" :key="driver.index" :id="'item' + driver.index">
-          <div>
-            <div class="image-upload" v-if="options.flags">
-              <label :for="'flag-input-' + driver.index">
-                <img
-                  class="flag"
-                  :src="'img/eformel/flags/' + driver.country + '.png'"
-                />
-              </label>
-              <input :id="'flag-input-' + driver.index" type="file" @change="changeFlag(driver.index)" />
+        <ul>
+          <li v-for="driver in groupTwo" :key="driver.index" :id="'item' + driver.index">
+            <div>
+              <div class="image-upload" v-if="options.flags">
+                <label :for="'flag-input-' + driver.index">
+                  <img
+                    class="flag"
+                    :src="'img/eformel/flags/' + driver.country + '.png'"
+                  />
+                </label>
+                <input :id="'flag-input-' + driver.index" type="file" @change="changeFlag(driver.index)" />
+              </div>
+              <input
+                class="name"
+                type="text"
+                placeholder="Driver / Team"
+                :value="driver.name"
+                @blur="updateName(driver.index, $event.target.value)"
+              />
             </div>
             <input
-              class="name"
+              class="team"
               type="text"
-              placeholder="Driver / Team"
-              :value="driver.name"
-              @blur="updateName(driver.index, $event.target.value)"
+              placeholder="Team"
+              :value="driver.team"
+              @blur="updateTeam(driver.index, $event.target.value)"
             />
-          </div>
-          <input
-            class="team"
-            type="text"
-            placeholder="Team"
-            :value="driver.team"
-            @blur="updateTeam(driver.index, $event.target.value)"
-          />
-        </li>
-      </ul>
-
-      <ul class="group">
-        <div class="groupHeader">
-          <input value="Gruppe 3" type="text" />
-        </div>
-        <li v-for="driver in groupThree" :key="driver.name" :id="'item' + driver.index">
-          <div>
-            <div class="image-upload" v-if="options.flags">
-              <label :for="'flag-input-' + driver.index">
-                <img
-                  class="flag"
-                  :src="'img/eformel/flags/' + driver.country + '.png'"
-                />
-              </label>
-              <input :id="'flag-input-' + driver.index" type="file" @change="changeFlag(driver.index)" />
-            </div>
-            <input
-              class="name"
-              type="text"
-              placeholder="Driver / Team"
-              :value="driver.name"
-              @blur="updateName(driver.index, $event.target.value)"
-            />
-          </div>
-          <input
-            class="team"
-            type="text"
-            placeholder="Team"
-            :value="driver.team"
-            @blur="updateTeam(driver.index, $event.target.value)"
-          />
-        </li>
-      </ul>
-
-      <ul class="group">
-        <div class="groupHeader">
-          <input value="Gruppe 4" type="text" />
-        </div>
-        <li v-for="driver in groupFour" :key="driver.index" :id="'item' + driver.index">
-          <div>
-            <div class="image-upload" v-if="options.flags">
-              <label :for="'flag-input-' + driver.index">
-                <img
-                  class="flag"
-                  :src="'img/eformel/flags/' + driver.country + '.png'"
-                />
-              </label>
-              <input :id="'flag-input-' + driver.index" type="file" @change="changeFlag(driver.index)" />
-            </div>
-            <input
-              class="name"
-              type="text"
-              placeholder="Driver / Team"
-              :value="driver.name"
-              @blur="updateName(driver.index, $event.target.value)"
-            />
-          </div>
-          <input
-            class="team"
-            type="text"
-            placeholder="Team"
-            v-model="driver.team"
-            @blur="updateTeam(driver.index, $event.target.value)"
-          />
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
     </div>
 
     <img id="logo" class="small" src="img/eformel/logo_small.png" />
@@ -321,16 +259,10 @@
         }
       },
       groupOne() {
-        return this.objects.slice(0, 6)
+        return this.objects.slice(0, 11)
       },
       groupTwo() {
-        return this.objects.slice(6, 12)
-      },
-      groupThree() {
-        return this.objects.slice(12, 18)
-      },
-      groupFour() {
-        return this.objects.slice(18, 24)
+        return this.objects.slice(12, 23)
       }
     }
   }
@@ -429,9 +361,10 @@
   .ranking {
     display: flex;
     flex-direction: row;
+    column-count: 2;
   }
   .ranking .group {
-    width: 418px;
+    width: 876px;
     box-sizing: content-box;
   }
   .ranking .group:not(:first-of-type) {
@@ -440,15 +373,21 @@
   .ranking .group:not(:last-of-type) {
     margin-right: 20px;
   }
+  .ranking .group ul {
+    column-count: 2;
+    break-inside: avoid-column;
+  }
   .ranking li {
     height: 72px;
     padding: 16px;
     background-color: var(--white);
     list-style-type: none;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     justify-content: center;
     position: relative;
+    break-inside: avoid-column;
+    width: calc(100% - 32px);
   }
   .ranking li > div {
     display: flex;
@@ -462,8 +401,8 @@
     font-size: 32px;
     line-height: 32px;
     padding: 0 16px;
-    width: 386px;
-    margin-bottom: 4px;
+    width: calc(100%-32px);
+    margin-bottom: 8px;
     height: 64px;
     display: flex;
     align-items: center;
