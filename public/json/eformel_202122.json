@@ -233,11 +233,11 @@
   },
   {
     "number": 0,
-    "name": "Andretti Autosport",
+    "name": "Avalanche Andretti",
     "tla": "andretti",
     "nationality": "andretti",
     "team": "andretti",
-    "fullTeam": "Andretti Autosport"
+    "fullTeam": "Avalanche Andretti"
   },
   {
     "number": 0,
@@ -257,11 +257,11 @@
   },
   {
     "number": 0,
-    "name": "Mercedes-EQ Formula E Team",
+    "name": "Mercedes-EQ",
     "tla": "mercedes",
     "nationality": "mercedes",
     "team": "mercedes",
-    "fullTeam": "Mercedes-EQ Formula E Team"
+    "fullTeam": "Mercedes-EQ"
   },
   {
     "number": 0,
@@ -373,7 +373,7 @@
     "tla": "DEN",
     "nationality": "uk",
     "team": "andretti",
-    "fullTeam": "Andretti Autosport"
+    "fullTeam": "Avalanche Andretti"
   },
   {
     "number": 28,
@@ -381,7 +381,7 @@
     "tla": "ASK",
     "nationality": "us",
     "team": "andretti",
-    "fullTeam": "Andretti Autosport"
+    "fullTeam": "Avalanche Andretti"
   },
   {
     "number": 36,
@@ -453,7 +453,7 @@
     "tla": "VAN",
     "nationality": "be",
     "team": "mercedes",
-    "fullTeam": "Mercedes-EQ Formula E Team"
+    "fullTeam": "Mercedes-EQ"
   },
   {
     "number": 17,
@@ -461,7 +461,7 @@
     "tla": "DEV",
     "nationality": "nl",
     "team": "mercedes",
-    "fullTeam": "Mercedes-EQ Formula E Team"
+    "fullTeam": "Mercedes-EQ"
   },
   {
     "number": 3,
