@@ -126,7 +126,7 @@
       }
       else {
         this.venue.title = 'Rennkalender'
-        this.venue.subline = 'Saison 2021/22'
+        this.venue.subline = 'Saison 2022/23'
         this.venue.country = ''
       }
 
@@ -213,7 +213,7 @@
       },
       updateName(i, input) {
         var driver = this.objects[i]
-        this.axios.get('json/eformel_202021.json').then((response) => {
+        this.axios.get('json/eformel_202223.json').then((response) => {
           for (var j = 0; j < response.data.length; j++) {
             if(input != "" && input != " ") {
               if(response.data[j].name.toLowerCase().includes(input) || response.data[j].name.toLowerCase() == input.toLowerCase() || response.data[j].tla.toLowerCase().includes(input) || response.data[j].number == input) {
