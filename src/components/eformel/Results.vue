@@ -453,9 +453,9 @@
     width: 120px;
   }
   .ranking li .car {
-    width: 221px;
-    height: 56px;
-    margin-left: 16px;
+    width: 210px;
+    height: 52px;
+    margin: 2px 16px 0;
   }
   .ranking .points {
     background-color: var(--eFormel-100);
