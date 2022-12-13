@@ -133,7 +133,7 @@
     "tla": "nissan",
     "nationality": "nissan",
     "team": "nissan",
-    "fullTeam": "Nissan Formula E Team"
+    "fullTeam": "Nissan Formula E"
   },
   {
     "number": 0,
@@ -185,19 +185,19 @@
   },
   {
     "number": 0,
-    "name": "Neom McLaren Formula E Team",
+    "name": "Neom McLaren Formula E",
     "tla": "mclaren",
     "nationality": "mclaren",
     "team": "mclaren",
-    "fullTeam": "Neom McLaren Formula E Team"
+    "fullTeam": "Neom McLaren Formula E"
   },
   {
     "number": 0,
-    "name": "ABT Sportsline",
+    "name": "ABT Cupra Formula E",
     "tla": "abt",
     "nationality": "abt",
     "team": "abt",
-    "fullTeam": "ABT Sportsline"
+    "fullTeam": "ABT Cupra Formula E"
   },
   {
     "number": 9,
@@ -333,7 +333,7 @@
     "tla": "NAT",
     "nationality": "fr",
     "team": "nissan",
-    "fullTeam": "Nissan Formula E Team"
+    "fullTeam": "Nissan Formula E"
   },
   {
     "number": 23,
@@ -341,7 +341,7 @@
     "tla": "FEN",
     "nationality": "fr",
     "team": "nissan",
-    "fullTeam": "Nissan Formula E Team"
+    "fullTeam": "Nissan Formula E"
   },
   {
     "number": 58,
@@ -349,7 +349,7 @@
     "tla": "RAS",
     "nationality": "de",
     "team": "mclaren",
-    "fullTeam": "Neom McLaren Formula E Team"
+    "fullTeam": "Neom McLaren Formula E"
   },
   {
     "number": 5,
@@ -357,7 +357,7 @@
     "tla": "HUG",
     "nationality": "uk",
     "team": "mclaren",
-    "fullTeam": "Neom McLaren Formula E Team"
+    "fullTeam": "Neom McLaren Formula E"
   },
   {
     "number": 4,
@@ -365,7 +365,7 @@
     "tla": "FRI",
     "nationality": "nl",
     "team": "abt",
-    "fullTeam": "ABT Sportsline"
+    "fullTeam": "ABT Cupra Formula E"
   },
   {
     "number": 51,
@@ -373,6 +373,6 @@
     "tla": "MUL",
     "nationality": "ch",
     "team": "abt",
-    "fullTeam": "ABT Sportsline"
+    "fullTeam": "ABT Cupra Formula E"
   }
 ]
