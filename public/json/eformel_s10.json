@@ -113,6 +113,30 @@
   },
   {
     "number": 0,
+    "name": "Portland",
+    "tla": "portland",
+    "nationality": "us",
+    "team": "Portland",
+    "fullTeam": "Portland"
+  },
+  {
+    "number": 0,
+    "name": "Tokio",
+    "tla": "tokio",
+    "nationality": "jp",
+    "team": "Tokio",
+    "fullTeam": "Tokio"
+  },
+  {
+    "number": 0,
+    "name": "Shanghai",
+    "tla": "shanghai",
+    "nationality": "cn",
+    "team": "Shanghai",
+    "fullTeam": "Shanghai"
+  },
+  {
+    "number": 0,
     "name": "Jaguar TCS Racing",
     "tla": "jaguar",
     "nationality": "jaguar",
@@ -121,11 +145,11 @@
   },
   {
     "number": 0,
-    "name": "Avalanche Andretti",
+    "name": "Andretti",
     "tla": "andretti",
     "nationality": "andretti",
     "team": "andretti",
-    "fullTeam": "Avalanche Andretti"
+    "fullTeam": "Andretti"
   },
   {
     "number": 0,
@@ -153,11 +177,11 @@
   },
   {
     "number": 0,
-    "name": "Nio 333 Racing",
-    "tla": "nio",
-    "nationality": "nio",
-    "team": "nio",
-    "fullTeam": "Nio 333 Racing"
+    "name": "ERT",
+    "tla": "ert",
+    "nationality": "ert",
+    "team": "ert",
+    "fullTeam": "ERT"
   },
   {
     "number": 0,
@@ -209,9 +233,9 @@
   },
   {
     "number": 10,
-    "name": "Sam Bird",
-    "tla": "BIR",
-    "nationality": "uk",
+    "name": "Nick Cassidy",
+    "tla": "CAS",
+    "nationality": "nz",
     "team": "jaguar",
     "fullTeam": "Jaguar TCS Racing"
   },
@@ -232,34 +256,34 @@
     "fullTeam": "TAG Heuer Porsche"
   },
   {
-    "number": 27,
+    "number": 1,
     "name": "Jake Dennis",
     "tla": "DEN",
     "nationality": "uk",
     "team": "andretti",
-    "fullTeam": "Avalanche Andretti"
+    "fullTeam": "Andretti"
   },
   {
-    "number": 36,
-    "name": "Andre Lotterer",
-    "tla": "LOT",
-    "nationality": "de",
+    "number": 17,
+    "name": "Norman Nato",
+    "tla": "NAT",
+    "nationality": "fr",
     "team": "andretti",
-    "fullTeam": "Avalanche Andretti"
+    "fullTeam": "Andretti"
   },
   {
-    "number": 8,
-    "name": "Roberto Merhi",
-    "tla": "MER",
-    "nationality": "es",
+    "number": 21,
+    "name": "Nyck de Vries",
+    "tla": "DEV",
+    "nationality": "nl",
     "team": "mahindra",
     "fullTeam": "Mahindra Racing"
   },
   {
-    "number": 11,
-    "name": "Lucas di Grassi",
-    "tla": "DIG",
-    "nationality": "br",
+    "number": 48,
+    "name": "Edoardo Mortara",
+    "tla": "MOR",
+    "nationality": "ch",
     "team": "mahindra",
     "fullTeam": "Mahindra Racing"
   },
@@ -268,24 +292,16 @@
     "name": "Dan Ticktum",
     "tla": "TIC",
     "nationality": "uk",
-    "team": "nio",
-    "fullTeam": "Nio 333 Racing"
+    "team": "ert",
+    "fullTeam": "ERT"
   },
   {
     "number": 3,
     "name": "Sergio Sette Camara",
     "tla": "SET",
     "nationality": "br",
-    "team": "nio",
-    "fullTeam": "Nio 333 Racing"
-  },
-  {
-    "number": 37,
-    "name": "Nick Cassidy",
-    "tla": "CAS",
-    "nationality": "nz",
-    "team": "envision",
-    "fullTeam": "Envision Racing"
+    "team": "ert",
+    "fullTeam": "ERT"
   },
   {
     "number": 16,
@@ -296,7 +312,15 @@
     "fullTeam": "Envision Racing"
   },
   {
-    "number": 1,
+    "number": 4,
+    "name": "Robin Frijns",
+    "tla": "FRI",
+    "nationality": "nl",
+    "team": "envision",
+    "fullTeam": "Envision Racing"
+  },
+  {
+    "number": 2,
     "name": "Stoffel Vandoorne",
     "tla": "VAN",
     "nationality": "be",
@@ -320,18 +344,18 @@
     "fullTeam": "Maserati MSG Racing"
   },
   {
-    "number": 48,
-    "name": "Edoardo Mortara",
-    "tla": "MOR",
-    "nationality": "ch",
+    "number": 18,
+    "name": "Jehan Daruvala",
+    "tla": "DAR",
+    "nationality": "in",
     "team": "maserati",
     "fullTeam": "Maserati MSG Racing"
   },
   {
-    "number": 17,
-    "name": "Norman Nato",
-    "tla": "NAT",
-    "nationality": "fr",
+    "number": 22,
+    "name": "Oliver Rowland",
+    "tla": "ROW",
+    "nationality": "uk",
     "team": "nissan",
     "fullTeam": "Nissan"
   },
@@ -344,14 +368,6 @@
     "fullTeam": "Nissan"
   },
   {
-    "number": 58,
-    "name": "Rene Rast",
-    "tla": "RAS",
-    "nationality": "de",
-    "team": "mclaren",
-    "fullTeam": "Neom McLaren"
-  },
-  {
     "number": 5,
     "name": "Jake Hughes",
     "tla": "HUG",
@@ -360,18 +376,18 @@
     "fullTeam": "Neom McLaren"
   },
   {
-    "number": 4,
-    "name": "Robin Frijns",
-    "tla": "FRI",
-    "nationality": "nl",
-    "team": "abt",
-    "fullTeam": "ABT Cupra"
+    "number": 8,
+    "name": "Sam Bird",
+    "tla": "BIR",
+    "nationality": "uk",
+    "team": "mclaren",
+    "fullTeam": "Neom McLaren"
   },
    {
-    "number": 4,
-    "name": "Robin Frijns",
-    "tla": "FRI",
-    "nationality": "nl",
+    "number": 11,
+    "name": "Lucas di Grassi",
+    "tla": "DIG",
+    "nationality": "br",
     "team": "abt",
     "fullTeam": "ABT Cupra"
   },

@@ -25,6 +25,10 @@ export function getCountry(city) {
   else if (country.includes("hyderabad")) { return "in"; }
   else if (country.includes("portland")) { return "us"; }
   else if (country.includes("sao")) { return "br"; }
+  else if (country.includes("tokio")) { return "jp"; }
+  else if (country.includes("tokyo")) { return "jp"; }
+  else if (country.includes("shanghai")) { return "cn"; }
+  else if (country.includes("schanghai")) { return "cn"; }
   else if (country.includes("valencia")) { return "es"; }
   else if (country.includes("puebla")) { return "mx"; }
   else if (country.includes("buenos")) { return "ar"; }
