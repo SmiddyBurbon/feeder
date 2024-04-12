@@ -13,6 +13,7 @@ export function getCountry(city) {
   else if (country.includes("hong")) { return "hk"; }
   else if (country.includes("sanya")) { return "cn"; }
   else if (country.includes("rom")) { return "it"; }
+  else if (country.includes("misano")) { return "it"; }
   else if (country.includes("paris")) { return "fr"; }
   else if (country.includes("monaco")) { return "mc"; }
   else if (country.includes("berlin")) { return "de"; }
