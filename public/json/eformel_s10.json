@@ -17,6 +17,14 @@
   },
   {
     "number": 0,
+    "name": "Misano",
+    "tla": "misano",
+    "nationality": "it",
+    "team": "Misano",
+    "fullTeam": "Misano"
+  },
+  {
+    "number": 0,
     "name": "Valencia",
     "tla": "valencia",
     "nationality": "es",
