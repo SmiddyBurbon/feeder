@@ -391,7 +391,15 @@
     "team": "mclaren",
     "fullTeam": "Neom McLaren"
   },
-   {
+  {
+    "number": 8,
+    "name": "Taylor Barnard",
+    "tla": "BAR",
+    "nationality": "uk",
+    "team": "mclaren",
+    "fullTeam": "Neom McLaren"
+  },
+  {
     "number": 11,
     "name": "Lucas di Grassi",
     "tla": "DIG",
