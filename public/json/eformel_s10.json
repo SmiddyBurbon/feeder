@@ -288,14 +288,6 @@
     "fullTeam": "Mahindra Racing"
   },
   {
-    "number": 21,
-    "name": "Jordan King",
-    "tla": "KIN",
-    "nationality": "uk",
-    "team": "mahindra",
-    "fullTeam": "Mahindra Racing"
-  },
-  {
     "number": 48,
     "name": "Edoardo Mortara",
     "tla": "MOR",
@@ -332,22 +324,6 @@
     "name": "Robin Frijns",
     "tla": "FRI",
     "nationality": "nl",
-    "team": "envision",
-    "fullTeam": "Envision Racing"
-  },
-  {
-    "number": 16,
-    "name": "Paul Aron",
-    "tla": "ARO",
-    "nationality": "ee",
-    "team": "envision",
-    "fullTeam": "Envision Racing"
-  },
-  {
-    "number": 4,
-    "name": "Joel Eriksson",
-    "tla": "ERI",
-    "nationality": "se",
     "team": "envision",
     "fullTeam": "Envision Racing"
   },
@@ -436,14 +412,6 @@
     "name": "Nico Müller",
     "tla": "MUL",
     "nationality": "ch",
-    "team": "abt",
-    "fullTeam": "ABT Cupra"
-  },
-  {
-    "number": 51,
-    "name": "Kelvin van der Linde",
-    "tla": "VDL",
-    "nationality": "za",
     "team": "abt",
     "fullTeam": "ABT Cupra"
   }
