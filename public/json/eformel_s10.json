@@ -281,6 +281,14 @@
   },
   {
     "number": 21,
+    "name": "Jordan King",
+    "tla": "KIN",
+    "nationality": "uk",
+    "team": "mahindra",
+    "fullTeam": "Mahindra Racing"
+  },
+  {
+    "number": 21,
     "name": "Nyck de Vries",
     "tla": "DEV",
     "nationality": "nl",
@@ -313,9 +321,25 @@
   },
   {
     "number": 16,
+    "name": "Paul Aron",
+    "tla": "ARO",
+    "nationality": "ee",
+    "team": "envision",
+    "fullTeam": "Envision Racing"
+  },
+  {
+    "number": 16,
     "name": "Sebastien Buemi",
     "tla": "BUE",
     "nationality": "ch",
+    "team": "envision",
+    "fullTeam": "Envision Racing"
+  },
+  {
+    "number": 4,
+    "name": "Joel Eriksson",
+    "tla": "ERI",
+    "nationality": "se",
     "team": "envision",
     "fullTeam": "Envision Racing"
   },
@@ -379,6 +403,14 @@
     "number": 5,
     "name": "Jake Hughes",
     "tla": "HUG",
+    "nationality": "uk",
+    "team": "mclaren",
+    "fullTeam": "Neom McLaren"
+  },
+  {
+    "number": 8,
+    "name": "Taylor Barnard",
+    "tla": "BAR",
     "nationality": "uk",
     "team": "mclaren",
     "fullTeam": "Neom McLaren"
