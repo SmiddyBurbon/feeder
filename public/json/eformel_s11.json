@@ -1,148 +1,4 @@
-[
-  {
-    "number": 0,
-    "name": "Diriyya",
-    "tla": "diriyya",
-    "nationality": "sa",
-    "team": "Diriyya",
-    "fullTeam": "Diriyya"
-  },
-  {
-    "number": 0,
-    "name": "Rom",
-    "tla": "rom",
-    "nationality": "it",
-    "team": "Rom",
-    "fullTeam": "Rom"
-  },
-  {
-    "number": 0,
-    "name": "Misano",
-    "tla": "misano",
-    "nationality": "it",
-    "team": "Misano",
-    "fullTeam": "Misano"
-  },
-  {
-    "number": 0,
-    "name": "Valencia",
-    "tla": "valencia",
-    "nationality": "es",
-    "team": "Valencia",
-    "fullTeam": "Valencia"
-  },
-  {
-    "number": 0,
-    "name": "Monaco",
-    "tla": "monaco",
-    "nationality": "mc",
-    "team": "Monaco",
-    "fullTeam": "Monaco"
-  },
-  {
-    "number": 0,
-    "name": "Monte Carlo",
-    "tla": "montecarlo",
-    "nationality": "mc",
-    "team": "Monte Carlo",
-    "fullTeam": "Monte Carlo"
-  },
-  {
-    "number": 0,
-    "name": "Berlin",
-    "tla": "berlin",
-    "nationality": "de",
-    "team": "Berlin",
-    "fullTeam": "Berlin"
-  },
-  {
-    "number": 0,
-    "name": "London",
-    "tla": "london",
-    "nationality": "uk",
-    "team": "London",
-    "fullTeam": "London"
-  },
-  {
-    "number": 0,
-    "name": "Jakarta",
-    "tla": "jakarta",
-    "nationality": "id",
-    "team": "Jakarta",
-    "fullTeam": "Jakarta"
-  },
-  {
-    "number": 0,
-    "name": "Seoul",
-    "tla": "seoul",
-    "nationality": "sk",
-    "team": "Seoul",
-    "fullTeam": "Seoul"
-  },
-  {
-    "number": 0,
-    "name": "Paris",
-    "tla": "paris",
-    "nationality": "fr",
-    "team": "Paris",
-    "fullTeam": "Paris"
-  },
-  {
-    "number": 0,
-    "name": "Mexiko-Stadt",
-    "tla": "mexiko",
-    "nationality": "mx",
-    "team": "Mexiko-Stadt",
-    "fullTeam": "Mexiko-Stadt"
-  },
-  {
-    "number": 0,
-    "name": "Kapstadt",
-    "tla": "kapstadt",
-    "nationality": "za",
-    "team": "Kapstadt",
-    "fullTeam": "Kapstadt"
-  },
-  {
-    "number": 0,
-    "name": "Hyderabad",
-    "tla": "hyderabad",
-    "nationality": "in",
-    "team": "Hyderabad",
-    "fullTeam": "Hyderabad"
-  },
-  {
-    "number": 0,
-    "name": "Sao Paulo",
-    "tla": "saopaulo",
-    "nationality": "br",
-    "team": "Sao Paulo",
-    "fullTeam": "Sao Paulo"
-  },
-  {
-    "number": 0,
-    "name": "Portland",
-    "tla": "portland",
-    "nationality": "us",
-    "team": "Portland",
-    "fullTeam": "Portland"
-  },
-  {
-    "number": 0,
-    "name": "Tokio",
-    "tla": "tokio",
-    "nationality": "jp",
-    "team": "Tokio",
-    "fullTeam": "Tokio"
-  },
-  {
-    "number": 0,
-    "name": "Shanghai",
-    "tla": "shanghai",
-    "nationality": "cn",
-    "team": "Shanghai",
-    "fullTeam": "Shanghai"
-  },
+[  
   {
     "number": 0,
     "name": "Jaguar TCS Racing",
@@ -225,11 +81,11 @@
   },
   {
     "number": 0,
-    "name": "ABT Cupra",
+    "name": "Lola Yamaha ABT",
     "tla": "abt",
     "nationality": "abt",
     "team": "abt",
-    "fullTeam": "ABT Cupra"
+    "fullTeam": "Lola Yamaha ABT"
   },
   {
     "number": 9,
@@ -273,19 +129,11 @@
   },
   {
     "number": 17,
-    "name": "Norman Nato",
-    "tla": "NAT",
-    "nationality": "fr",
+    "name": "Nico Müller",
+    "tla": "MUL",
+    "nationality": "ch",
     "team": "andretti",
     "fullTeam": "Andretti"
-  },
-  {
-    "number": 21,
-    "name": "Jordan King",
-    "tla": "KIN",
-    "nationality": "uk",
-    "team": "mahindra",
-    "fullTeam": "Mahindra Racing"
   },
   {
     "number": 21,
@@ -304,28 +152,20 @@
     "fullTeam": "Mahindra Racing"
   },
   {
-    "number": 33,
-    "name": "Dan Ticktum",
+    "number": 0,
+    "name": "ERT Driver1",
     "tla": "TIC",
-    "nationality": "uk",
+    "nationality": "de",
     "team": "ert",
     "fullTeam": "ERT"
   },
   {
-    "number": 3,
-    "name": "Sergio Sette Camara",
+    "number": 0,
+    "name": "ERT Driver2",
     "tla": "SET",
-    "nationality": "br",
+    "nationality": "de",
     "team": "ert",
     "fullTeam": "ERT"
-  },
-  {
-    "number": 16,
-    "name": "Paul Aron",
-    "tla": "ARO",
-    "nationality": "ee",
-    "team": "envision",
-    "fullTeam": "Envision Racing"
   },
   {
     "number": 16,
@@ -337,27 +177,11 @@
   },
   {
     "number": 4,
-    "name": "Joel Eriksson",
-    "tla": "ERI",
-    "nationality": "se",
-    "team": "envision",
-    "fullTeam": "Envision Racing"
-  },
-  {
-    "number": 4,
     "name": "Robin Frijns",
     "tla": "FRI",
     "nationality": "nl",
     "team": "envision",
     "fullTeam": "Envision Racing"
-  },
-  {
-    "number": 2,
-    "name": "Stoffel Vandoorne",
-    "tla": "VAN",
-    "nationality": "be",
-    "team": "ds",
-    "fullTeam": "DS Penske"
   },
   {
     "number": 25,
@@ -372,24 +196,24 @@
     "name": "Maximilian Günther",
     "tla": "GUN",
     "nationality": "de",
+    "team": "ds",
+    "fullTeam": "DS Penske"
+  },
+  {
+    "number": 2,
+    "name": "Stoffel Vandoorne",
+    "tla": "VAN",
+    "nationality": "be",
     "team": "maserati",
     "fullTeam": "Maserati MSG Racing"
   },
   {
-    "number": 18,
-    "name": "Jehan Daruvala",
-    "tla": "DAR",
-    "nationality": "in",
+    "number": 5,
+    "name": "Jake Hughes",
+    "tla": "HUG",
+    "nationality": "uk",
     "team": "maserati",
     "fullTeam": "Maserati MSG Racing"
-  },
-  {
-    "number": 22,
-    "name": "Caio Collet",
-    "tla": "COL",
-    "nationality": "br",
-    "team": "nissan",
-    "fullTeam": "Nissan"
   },
   {
     "number": 22,
@@ -401,22 +225,14 @@
   },
   {
     "number": 23,
-    "name": "Sacha Fenestraz",
-    "tla": "FEN",
+    "name": "Norman Nato",
+    "tla": "NAT",
     "nationality": "fr",
     "team": "nissan",
     "fullTeam": "Nissan"
   },
   {
-    "number": 5,
-    "name": "Jake Hughes",
-    "tla": "HUG",
-    "nationality": "uk",
-    "team": "mclaren",
-    "fullTeam": "Neom McLaren"
-  },
-  {
-    "number": 8,
+    "number": 0,
     "name": "Taylor Barnard",
     "tla": "BAR",
     "nationality": "uk",
@@ -437,14 +253,14 @@
     "tla": "DIG",
     "nationality": "br",
     "team": "abt",
-    "fullTeam": "ABT Cupra"
+    "fullTeam": "Lola Yamaha ABT"
   },
   {
     "number": 51,
-    "name": "Nico Müller",
-    "tla": "MUL",
-    "nationality": "ch",
+    "name": "Zane Maloney",
+    "tla": "MAL",
+    "nationality": "bb",
     "team": "abt",
-    "fullTeam": "ABT Cupra"
+    "fullTeam": "Lola Yamaha ABT"
   }
 ]
