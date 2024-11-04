@@ -152,18 +152,18 @@
     "fullTeam": "Mahindra Racing"
   },
   {
-    "number": 0,
-    "name": "ERT Driver1",
-    "tla": "TIC",
+    "number": 3,
+    "name": "David Beckmann",
+    "tla": "BEC",
     "nationality": "de",
     "team": "kiro",
     "fullTeam": "KIRO"
   },
   {
-    "number": 0,
-    "name": "ERT Driver2",
-    "tla": "SET",
-    "nationality": "de",
+    "number": 33,
+    "name": "Dan Ticktum",
+    "tla": "TIC",
+    "nationality": "uk",
     "team": "kiro",
     "fullTeam": "KIRO"
   },
