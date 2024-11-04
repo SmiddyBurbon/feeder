@@ -41,11 +41,11 @@
   },
   {
     "number": 0,
-    "name": "ERT",
-    "tla": "ert",
-    "nationality": "ert",
-    "team": "ert",
-    "fullTeam": "ERT"
+    "name": "Kiro Race Co.",
+    "tla": "kiro",
+    "nationality": "kiro",
+    "team": "kiro",
+    "fullTeam": "Kiro Race Co"
   },
   {
     "number": 0,
@@ -156,16 +156,16 @@
     "name": "ERT Driver1",
     "tla": "TIC",
     "nationality": "de",
-    "team": "ert",
-    "fullTeam": "ERT"
+    "team": "kiro",
+    "fullTeam": "KIRO"
   },
   {
     "number": 0,
     "name": "ERT Driver2",
     "tla": "SET",
     "nationality": "de",
-    "team": "ert",
-    "fullTeam": "ERT"
+    "team": "kiro",
+    "fullTeam": "KIRO"
   },
   {
     "number": 16,
@@ -208,7 +208,7 @@
     "fullTeam": "Maserati MSG Racing"
   },
   {
-    "number": 5,
+    "number": 55,
     "name": "Jake Hughes",
     "tla": "HUG",
     "nationality": "uk",
@@ -232,7 +232,7 @@
     "fullTeam": "Nissan"
   },
   {
-    "number": 0,
+    "number": 5,
     "name": "Taylor Barnard",
     "tla": "BAR",
     "nationality": "uk",
@@ -256,7 +256,7 @@
     "fullTeam": "Lola Yamaha ABT"
   },
   {
-    "number": 51,
+    "number": 22,
     "name": "Zane Maloney",
     "tla": "MAL",
     "nationality": "bb",
