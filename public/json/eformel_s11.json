@@ -262,7 +262,7 @@
     "nationality": "bb",
     "team": "abt",
     "fullTeam": "Lola Yamaha ABT"
-  },
+  }/*,
   {
     "number": 9,
     "name": "Jamie Chadwick",
@@ -406,5 +406,5 @@
     "nationality": "ch",
     "team": "mahindra",
     "fullTeam": "Mahindra Racing"
-  }
+  }*/
 ]
