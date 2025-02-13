@@ -5,7 +5,7 @@ export function getCountry(city) {
 
   if (country.includes("diriyya")) { return "sa"; }
   else if (country.includes("diriyah")) { return "sa"; }
-  else if {country.includes("jeddah")} { return "sa"; }
+  else if (country.includes("jeddah")) { return "sa"; }
   else if (country.includes("marrakesch")) { return "ma"; }
   else if (country.includes("marrakesh")) { return "ma"; }
   else if (country.includes("marrakech")) { return "ma"; }
