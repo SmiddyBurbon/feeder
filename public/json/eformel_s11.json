@@ -135,14 +135,6 @@
     "team": "andretti",
     "fullTeam": "Andretti"
   },
-/*  {
-    "number": 21,
-    "name": "Nyck de Vries",
-    "tla": "DEV",
-    "nationality": "nl",
-    "team": "mahindra",
-    "fullTeam": "Mahindra Racing"
-  },*/
   {
     "number": 21,
     "name": "Felipe Drugovich",
@@ -231,14 +223,6 @@
     "team": "nissan",
     "fullTeam": "Nissan"
   },
-  /*{
-    "number": 17,
-    "name": "Norman Nato",
-    "tla": "NAT",
-    "nationality": "fr",
-    "team": "nissan",
-    "fullTeam": "Nissan"
-  },*/
   {
     "number": 17,
     "name": "Sergio Sette Camara",
