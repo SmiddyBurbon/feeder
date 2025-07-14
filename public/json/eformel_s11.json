@@ -144,6 +144,14 @@
     "fullTeam": "Mahindra Racing"
   },
   {
+    "number": 21,
+    "name": "Nyck de Vries",
+    "tla": "DEV",
+    "nationality": "nl",
+    "team": "mahindra",
+    "fullTeam": "Mahindra Racing"
+  },
+  {
     "number": 48,
     "name": "Edoardo Mortara",
     "tla": "MOR",
@@ -228,6 +236,14 @@
     "name": "Sergio Sette Camara",
     "tla": "SET",
     "nationality": "br",
+    "team": "nissan",
+    "fullTeam": "Nissan"
+  },
+  {
+    "number": 17,
+    "name": "Norman Nato",
+    "tla": "NAT",
+    "nationality": "fr",
     "team": "nissan",
     "fullTeam": "Nissan"
   },
