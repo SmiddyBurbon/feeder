@@ -124,8 +124,8 @@
     "name": "Felipe Drugovich",
     "tla": "DRU",
     "nationality": "br",
-    "team": "mahindra",
-    "fullTeam": "Mahindra Racing"
+    "team": "andretti",
+    "fullTeam": "Andretti"
   },
   {
     "number": 21,
@@ -160,22 +160,6 @@
     "fullTeam": "Kiro Race Co"
   },
   {
-    "number": 16,
-    "name": "Sebastien Buemi",
-    "tla": "BUE",
-    "nationality": "ch",
-    "team": "envision",
-    "fullTeam": "Envision Racing"
-  },
-  {
-    "number": 14,
-    "name": "Joel Eriksson",
-    "tla": "ERI",
-    "nationality": "se",
-    "team": "envision",
-    "fullTeam": "Envision Racing"
-  },
-  {
     "number": 5,
     "name": "Taylor Barnard",
     "tla": "BAR",
@@ -207,7 +191,22 @@
     "team": "citroen",
     "fullTeam": "Citroen Racing"
   },
-
+  {
+    "number": 16,
+    "name": "Sebastien Buemi",
+    "tla": "BUE",
+    "nationality": "ch",
+    "team": "envision",
+    "fullTeam": "Envision Racing"
+  },
+  {
+    "number": 14,
+    "name": "Joel Eriksson",
+    "tla": "ERI",
+    "nationality": "se",
+    "team": "envision",
+    "fullTeam": "Envision Racing"
+  },
   {
     "number": 17,
     "name": "Norman Nato",
