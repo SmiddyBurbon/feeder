@@ -35,6 +35,7 @@ export function getCountry(city) {
   else if (country.includes("puebla")) { return "mx"; }
   else if (country.includes("buenos")) { return "ar"; }
   else if (country.includes("vancouver")) { return "ca"; }
+  else if (country.includes("madrid")) { return "es"; }
   else if (country.includes("eindhoven")) { return "nl"; }
   else if (country.includes("kapstadt")) { return "za"; }
   else if (country.includes("cape town")) { return "za"; }
