@@ -25,11 +25,11 @@
   },
   {
     "number": 0,
-    "name": "TAG Heuer Porsche",
+    "name": "Porsche",
     "tla": "porsche",
     "nationality": "porsche",
     "team": "porsche",
-    "fullTeam": "TAG Heuer Porsche"
+    "fullTeam": "Porsche"
   },
   {
     "number": 0,
@@ -41,11 +41,11 @@
   },
   {
     "number": 0,
-    "name": "Kiro Race Co.",
+    "name": "Cupra Kiro",
     "tla": "kiro",
     "nationality": "kiro",
     "team": "kiro",
-    "fullTeam": "Kiro Race Co"
+    "fullTeam": "Cupra Kiro"
   },
   {
     "number": 0,
@@ -101,7 +101,7 @@
     "tla": "WEH",
     "nationality": "de",
     "team": "porsche",
-    "fullTeam": "TAG Heuer Porsche"
+    "fullTeam": "Porsche"
   },
   {
     "number": 51,
@@ -109,7 +109,7 @@
     "tla": "MUL",
     "nationality": "ch",
     "team": "porsche",
-    "fullTeam": "TAG Heuer Porsche"
+    "fullTeam": "Porsche"
   },
   {
     "number": 27,
@@ -149,7 +149,7 @@
     "tla": "MAR",
     "nationality": "es",
     "team": "kiro",
-    "fullTeam": "Kiro Race Co"
+    "fullTeam": "Cupra Kiro"
   },
   {
     "number": 33,
@@ -157,7 +157,7 @@
     "tla": "TIC",
     "nationality": "uk",
     "team": "kiro",
-    "fullTeam": "Kiro Race Co"
+    "fullTeam": "Cupra Kiro"
   },
   {
     "number": 77,
