@@ -26,6 +26,7 @@ export function getCountry(city) {
   else if (country.includes("jakarta")) { return "id"; }
   else if (country.includes("hyderabad")) { return "in"; }
   else if (country.includes("portland")) { return "us"; }
+  else if (country.includes("miami")) { return "us"; }
   else if (country.includes("sao")) { return "br"; }
   else if (country.includes("tokio")) { return "jp"; }
   else if (country.includes("tokyo")) { return "jp"; }
