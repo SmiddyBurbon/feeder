@@ -7,9 +7,9 @@
         <h2>Transform your raw data into professionally designed visual content.<br />Feeder generates infographics in your custom style.<br />From any device.</h2>
       </div>
 
-      <router-link to="/demo" tag="button" type="button" class="primary">
+      <router-link to="/demo" custom v-slot="{ navigate }"><button type="button" class="primary" @click="navigate">
         Try the demo
-      </router-link>
+      </button></router-link>
     </div>
   </section>
 </template>

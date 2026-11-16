@@ -1,13 +1,13 @@
 <template>
   <div id="canvas" :style="cssVars">
     <div class="headline">
-      <div class="country" v-if="this.venue.country"><img :src="'img/eformel/flags/' + this.venue.country + '.png'" /></div>
+      <div class="country" v-if="this.venue.country"><img :src="flagSrc(this.venue.country)" /></div>
       <div class="event">
         <h1><input class="inputH1" type="text" v-model="venue.title" @blur="updateEvent($event.target.value)" /></h1>
         <h2><input class="inputH2" @blur="updateEvent($event.target.value)" v-model="venue.subline" type="text" placeholder="E-Prix" /></h2>
       </div>
       <div v-if="this.options.sponsor" class="sponsor">
-        <img src="img/eformel/we_logo.svg" alt="Presented by Würth Elektronik" />
+        <img src="/img/eformel/we_logo.svg" alt="Presented by Würth Elektronik" />
       </div>
     </div>
 
@@ -23,7 +23,7 @@
                 <label :for="'flag-input-' + driver.index">
                   <img
                     class="flag"
-                    :src="'img/eformel/flags/' + driver.country + '.png'"
+                    :src="flagSrc(driver.country)"
                   />
                 </label>
                 <input :id="'flag-input-' + driver.index" type="file" @change="changeFlag(driver.index)" />
@@ -58,7 +58,7 @@
                 <label :for="'flag-input-' + driver.index">
                   <img
                     class="flag"
-                    :src="'img/eformel/flags/' + driver.country + '.png'"
+                    :src="flagSrc(driver.country)"
                   />
                 </label>
                 <input :id="'flag-input-' + driver.index" type="file" @change="changeFlag(driver.index)" />
@@ -83,11 +83,14 @@
       </div>
     </div>
 
-    <img id="logo" class="small" src="img/eformel/logo_small.png" />
+    <img id="logo" class="small" src="/img/eformel/logo_small.png" />
   </div>
 </template>
 
 <script>
+  import { flagSrc, carSrc } from '@/app/assets'
+  import { bus } from '@/app/bus'
+  import { http } from '@/app/http'
   import { getCountry } from '../../assets/js/eformel.js'
 
   export default {
@@ -128,9 +131,11 @@
         this.venue.country = ''
       }
 
-      this.$root.$emit('mounted', this.options)
+      bus.emit('mounted', this.options)
     },
     methods: {
+      flagSrc,
+      carSrc,
       updateEvent() {
         this.setCountry(this.venue.subline)
         this.persistVenue(this.venue)
@@ -141,7 +146,7 @@
       },
       updateName(i, input) {
         var driver = this.objects[i]
-        this.axios.get('json/eformel_202223.json').then((response) => {
+        http.get('/json/eformel_202223.json').then((response) => {
           for (var j = 0; j < response.data.length; j++) {
             if(input != "" && input != " ") {
               if(response.data[j].name.toLowerCase().includes(input) || response.data[j].name.toLowerCase() == input.toLowerCase() || response.data[j].tla.toLowerCase().includes(input) || response.data[j].number == input) {

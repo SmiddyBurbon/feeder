@@ -24,7 +24,7 @@
               <label :for="'logo-input-' + object.index">
                 <img
                   class="logo"
-                  :src="'img/demo/logos/logo_' + object.logo + '.svg'"
+                  :src="'/img/demo/logos/logo_' + object.logo + '.svg'"
                 />
               </label>
               <input :id="'logo-input-' + object.index" type="file" @change="changeLogo(object.index)" />
@@ -65,12 +65,14 @@
     </div>
     <div class="watermark">
       <p>Created with<br /><strong>feeder.vercel.app</strong></p>
-      <img id="logo" class="small" src="img/icons/ic_logo.svg" />
+      <img id="logo" class="small" src="/img/icons/ic_logo.svg" />
     </div>
   </div>
 </template>
 
 <script>
+  import { bus } from '@/app/bus'
+  import { http } from '@/app/http'
   import { getClub } from '../../assets/js/demo.js'
 
   export default {
@@ -104,9 +106,9 @@
     },
     mounted() {
       this.createList()
-      this.$root.$emit('mounted', this.options)
+      bus.emit('mounted', this.options)
 
-      this.axios
+      http
         .get('https://www.thesportsdb.com/api/v1/json/1/lookuptable.php?l=4328&s=2020-2021')
         .then(
           response => (
@@ -114,8 +116,8 @@
           )
         );
 
-      this.$root.$on('getData', () => {
-        this.axios
+      bus.on('getData', () => {
+        http
           .get('https://www.thesportsdb.com/api/v1/json/1/lookuptable.php?l=4328&s=2020-2021')
           .then(
             response => (
@@ -124,7 +126,7 @@
           );
       });
 
-      this.$root.$on('updatedObjects', options => {
+      bus.on('updatedObjects', options => {
           document.getElementById('canvas').style.backgroundPositionX = (100-options.bgX) + "%";
 
           if(options.lines < this.objects.length) {
@@ -143,7 +145,7 @@
 
       /*var i
 
-      this.axios
+      http
         .get('https://www.thesportsdb.com/api/v1/json/1/lookuptable.php?l=4328&s=1920')
         .then(
           response => (

@@ -2,13 +2,13 @@
   <div>
     <div class="buttons">
       <button id="download" class="primary" @click="downloadImage()">.PNG<img src="../assets/img/icons/ic_download.svg" /></button>
-      <!-- <button id="tweet" @click="tweet">Tweet</button> -->
     </div>
     <div id="exportable"></div>
   </div>
 </template>
 
 <script>
+  import { renderToCanvas } from '@/app/export'
   import { saveAs } from 'file-saver';
 
   export default {
@@ -18,7 +18,7 @@
       }
     },
     methods: {
-      downloadImage() {
+      async downloadImage() {
         var canvas = document.getElementById('preview')
         var width = canvas.offsetWidth;
         var height = canvas.clientHeight;
@@ -44,58 +44,14 @@
 
         canvas = document.getElementById('exportable')
 
-        this.$html2canvas(canvas, {
-          scale: 1
-        }).then(function(canvas) {
-            canvas.toBlob((blob) => {
-              saveAs(blob, 'image.png')
-            })
-        });
+        // Let fonts finish loading and the clone get laid out before the clone is rendered.
+        await document.fonts.ready
+        await new Promise((resolve) => setTimeout(resolve, 100))
 
-
-
-        // VIDEO EXPERIMENT
-
-        /*var frames = [];
-        var $vm = this
-
-        setInterval(function() {
-          if(frames.length < 8) {
-            $vm.$html2canvas(canvas, {
-              scale: 1
-            }).then(function(canvas) {
-                canvas.toBlob((blob) => {
-                  frames.push(blob)
-                  // saveAs(blob, 'image.png')
-                })
-                console.log(frames.length)
-            });
-          }
-        }, 500)*/
-      },
-      tweet() {
-        this.axios
-          .post('https://upload.twitter.com/1.1/media/upload.json?command=APPEND&media_id=123&segment_index=2&media_data=123')
-          .then(
-            response => (
-              console.log(response)
-            )
-          );
-      },
-      saveAs(uri, filename) {
-        var link = document.createElement('a');
-        if (typeof link.download === 'string') {
-            link.href = uri;
-            link.download = filename;
-            //Firefox requires the link to be in the body
-            document.body.appendChild(link);
-            //simulate click
-            link.click();
-            //remove the link when done
-            document.body.removeChild(link);
-        } else {
-            window.open(uri);
-        }
+        const rendered = await renderToCanvas(canvas)
+        rendered.toBlob((blob) => {
+          if (blob) saveAs(blob, 'image.png')
+        })
       }
     }
   }
@@ -127,9 +83,6 @@
     width: 2.5rem;
     height: 2.5rem;
     margin-left: 1rem;
-  }
-  #tweet {
-    background-color: #00acee;
   }
   #exportable {
     position: absolute;

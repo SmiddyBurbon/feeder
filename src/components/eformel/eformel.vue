@@ -1,12 +1,12 @@
 <template>
   <div>
-    <Header :isLoggedIn="isLoggedIn"></Header>
+    <Header></Header>
     <div class="menu">
       <ul>
         <li>
           <router-link to="studio?type=eformel_results">
             <div class="thumb">
-              <img src="img/eformel/preview/results.png" />
+              <img src="/img/eformel/preview/results.png" />
             </div>
             <span>Ergebnisse</span>
           </router-link>
@@ -14,7 +14,7 @@
         <li>
           <router-link to="studio?type=eformel_drivers">
             <div class="thumb">
-              <img src="img/eformel/preview/drivers.png" />
+              <img :src="'/img/eformel/preview/drivers.png'" /> <!-- TODO: preview image missing -->
             </div>
             <span>Fahrerwertung</span>
           </router-link>
@@ -22,7 +22,7 @@
         <li>
           <router-link to="studio?type=eformel_teams">
             <div class="thumb">
-              <img src="img/eformel/preview/teams.png" />
+              <img :src="'/img/eformel/preview/teams.png'" /> <!-- TODO: preview image missing -->
             </div>
             <span>Teamwertung</span>
           </router-link>
@@ -30,51 +30,19 @@
          <li>
           <router-link to="studio?type=eformel_schedule">
             <div class="thumb">
-              <img src="img/eformel/preview/schedule.png" />
+              <img :src="'/img/eformel/preview/schedule.png'" /> <!-- TODO: preview image missing -->
             </div>
             <span>Rennkalender</span>
           </router-link>
         </li>
-        <!--<li>
-          <router-link to="studio?type=eformel_news">
-            <div class="thumb">
-              <img src="img/eformel/preview/news.png" />
-            </div>
-            <span>News</span>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="studio?type=eformel_story">
-            <div class="thumb">
-              <img src="img/eformel/preview/story.png" />
-            </div>
-            <span>Story</span>
-          </router-link>
-        </li>-->
         <li>
           <router-link to="studio?type=eformel_quali">
             <div class="thumb">
-              <img src="img/eformel/preview/quali.png" />
+              <img src="/img/eformel/preview/quali.png" />
             </div>
             <span>Quali</span>
           </router-link>
         </li>
-        <!--<li>
-          <router-link to="studio?type=eformel_rating">
-            <div class="thumb">
-              <img src="img/eformel/preview/rating.png" />
-            </div>
-            <span>Driver Rating</span>
-          </router-link>
-        </li>
-        <li>
-          <router-link to="studio?type=eformel_quote">
-            <div class="thumb">
-              <img src="img/eformel/preview/quote.png" />
-            </div>
-            <span>Quote</span>
-          </router-link>
-        </li>-->
       </ul>
     </div>
   </div>

@@ -1,4 +1,3 @@
-<style>
 .menu ul {
   display: grid;
   width: 85.4%;
@@ -73,4 +72,3 @@
     grid-template-columns: 1fr;
   }
 }
-</style>

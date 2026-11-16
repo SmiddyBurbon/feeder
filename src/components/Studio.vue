@@ -14,6 +14,7 @@
 </template>
 
 <script>
+  import { bus } from '@/app/bus'
 import Sidebar from './Sidebar.vue'
 import Main from './Main.vue'
 import Download from './Download.vue'
@@ -27,21 +28,21 @@ export default {
   data() {
     return {
       options: false,
-      optionsButton: './img/icons/ic_options.svg'
+      optionsButton: '/img/icons/ic_options.svg'
     }
   },
   mounted() {
     var aside = document.getElementById('aside');
 
-    this.$root.$on('showOptions', () => {
+    bus.on('showOptions', () => {
       aside.style.left = 0;
-      this.optionsButton = './img/icons/ic_close.svg'
+      this.optionsButton = '/img/icons/ic_close.svg'
       this.options = true;
     })
 
-    this.$root.$on('hideOptions', () => {
+    bus.on('hideOptions', () => {
       aside.style.left = "-100vw";
-      this.optionsButton = './img/icons/ic_options.svg'
+      this.optionsButton = '/img/icons/ic_options.svg'
       this.options = false;
     })
   },
@@ -53,10 +54,10 @@ export default {
     },
     toggleOptions() {
         if(this.options) {
-          this.$root.$emit('hideOptions')
+          bus.emit('hideOptions')
         }
         else {
-          this.$root.$emit('showOptions')
+          bus.emit('showOptions')
         }
     }
   }

@@ -5,16 +5,12 @@
       <EFormelDrivers v-if="isType('eformel_drivers')"></EFormelDrivers>
       <EFormelTeams v-if="isType('eformel_teams')"></EFormelTeams>
       <EFormelQuali v-if="isType('eformel_quali')"></EFormelQuali>
-      <EFormelRating v-if="isType('eformel_rating')"></EFormelRating>
       <EFormelSchedule v-if="isType('eformel_schedule')"></EFormelSchedule>
 
       <DemoTable v-if="isType('demo_table')"></DemoTable>
       <DemoScore v-if="isType('demo_score')"></DemoScore>
       <DemoFormulaE v-if="isType('demo_formulae')"></DemoFormulaE>
 
-      <XEResults v-if="isType('xe_results')"></XEResults>
-
-      <ARTStandings v-if="isType('art_standings')"></ARTStandings>
       <Table v-if="isType('feeder_table')"></Table>
     </div>
   </main>
@@ -25,25 +21,19 @@
   import EFormelDrivers from './eformel/Drivers.vue'
   import EFormelTeams from './eformel/Teams.vue'
   import EFormelQuali from './eformel/Quali.vue'
-  import EFormelRating from './eformel/Rating.vue'
   import EFormelSchedule from './eformel/Schedule.vue'
 
   import DemoTable from './demo/Table.vue'
   import DemoScore from './demo/Score.vue'
   import DemoFormulaE from './demo/FormulaE.vue'
 
-  import ARTStandings from './brl/ARTStandings.vue'
   import Table from './feeder/Table.vue'
-
-  import XEResults from './xe/Results.vue'
 
   export default {
     name: 'Main',
     components: {
-      EFormelResults, EFormelDrivers, EFormelTeams, EFormelQuali, EFormelRating, EFormelSchedule,
+      EFormelResults, EFormelDrivers, EFormelTeams, EFormelQuali, EFormelSchedule,
       DemoTable, DemoScore, DemoFormulaE,
-      XEResults,
-      ARTStandings,
       Table
     },
     mounted() {

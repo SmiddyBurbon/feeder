@@ -1,12 +1,12 @@
 <template>
   <div>
-    <Header :isLoggedIn="isLoggedIn"></Header>
+    <Header></Header>
     <div class="menu">
       <ul>
         <li>
           <router-link to="studio?type=feeder_table">
             <div class="thumb">
-              <img src="img/eformel/preview/results.png" />
+              <img src="/img/eformel/preview/results.png" />
             </div>
             <span>Results</span>
           </router-link>

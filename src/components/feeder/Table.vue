@@ -1,13 +1,13 @@
 <template>
   <div id="canvas" :style="cssVars">
     <div class="headline">
-      <div class="country" v-if="this.country"><img :src="'img/eformel/flags/' + this.country + '.png'" /></div>
+      <div class="country" v-if="this.country"><img :src="'/img/eformel/flags/' + this.country + '.png'" /></div>
       <div class="event">
         <h1><input class="inputH1 apply-font" type="text" v-model="title" /></h1>
         <h2><input class="inputH2" @blur="setCountry(subline)" v-model="subline" type="text" placeholder="E-Prix" /></h2>
       </div>
       <div v-if="this.options.sponsor" class="sponsor">
-        <img src="img/eformel/we_logo.svg" alt="Presented by Würth Elektronik" />
+        <img src="/img/eformel/we_logo.svg" alt="Presented by Würth Elektronik" />
       </div>
     </div>
 
@@ -52,6 +52,7 @@
 </template>
 
 <script>
+  import { bus } from '@/app/bus'
   export default {
     name: 'Results',
     props: [
@@ -87,19 +88,19 @@
     },
     mounted() {
       this.createList()
-      this.$root.$emit('mounted', this.options)
+      bus.emit('mounted', this.options)
 
-      this.$root.$on('fontChanged', newFont => {
+      bus.on('fontChanged', newFont => {
         this.updateFont(newFont)
       })
 
-      this.$root.$on('colorsChanged', colors => {
+      bus.on('colorsChanged', colors => {
         console.log(colors)
         this.options.colors.primary = colors.primary
         this.options.colors.secondary = colors.secondary
       })
 
-      this.$root.$on('updatedObjects', options => {
+      bus.on('updatedObjects', options => {
           if(options.lines < this.objects.length) {
             let diff = this.objects.length - options.lines
             for (var i = 0; i < diff; i++) {

@@ -10,14 +10,14 @@
               <label for="file-input-1">
                 <img
                   class="flag"
-                  :src="'img/demo/flags/' + team1.logo + '.png'"
+                  :src="'/img/demo/flags/' + team1.logo + '.png'"
                 />
               </label>
               <input id="file-input-1" type="file" @change="readURL('1')" />
             </div>
             <input type="text" class="name" v-model="team1.name" @blur="updateName(team1, $event.target.value)" />
           </div>
-          <textarea-autosize v-model="team1.scorers" v-if="options.scorers" class="scorers" rows="1" />
+          <AutoTextarea v-model="team1.scorers" v-if="options.scorers" class="scorers" rows="1" />
         </div>
 
         <div class="separator">
@@ -34,12 +34,12 @@
               <label for="file-input-2">
                 <img
                   class="flag"
-                  :src="'img/demo/flags/' + team2.logo + '.png'"
+                  :src="'/img/demo/flags/' + team2.logo + '.png'"
                 />
               </label>
             </div>
           </div>
-          <textarea-autosize v-model="team2.scorers" v-if="options.scorers" class="scorers" rows="1" />
+          <AutoTextarea v-model="team2.scorers" v-if="options.scorers" class="scorers" rows="1" />
         </div>
 
       </div>
@@ -49,16 +49,19 @@
 
     <div class="watermark">
       <p>Created with<br /><strong>feeder.vercel.app</strong></p>
-      <img id="logo" class="small" src="img/icons/ic_logo.svg" />
+      <img id="logo" class="small" src="/img/icons/ic_logo.svg" />
     </div>
   </div>
 </template>
 
 <script>
+  import AutoTextarea from '@/components/AutoTextarea.vue'
+  import { bus } from '@/app/bus'
   import { getClub } from '../../assets/js/demo.js'
 
   export default {
     name: 'Score',
+    components: { AutoTextarea },
     data() {
       return {
         team1: {
@@ -87,9 +90,9 @@
       }
     },
     mounted() {
-      this.$root.$emit('mounted', this.options)
+      bus.emit('mounted', this.options)
 
-      this.$root.$on('updatedObjects', options => {
+      bus.on('updatedObjects', options => {
           document.getElementById('canvas').style.backgroundPositionX = (100-options.bgX) + "%";
       });
       this.setDate()

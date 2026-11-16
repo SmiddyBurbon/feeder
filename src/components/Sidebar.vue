@@ -11,7 +11,7 @@
       </div>
 
       <!--<div class="row">
-        <Material v-model="colors"></Material>
+
       </div>-->
 
       <div class="row color" v-if="this.exists(options.colors) && this.exists(options.colors.primary)">
@@ -44,12 +44,9 @@
 
       <div class="row" v-if="this.exists(options.fontpicker)">
         <label>Font</label>
-        <font-picker
-          :api-key="'AIzaSyC-GhYfD9TW1Nv4W_mWxvkmj5vqpEblE-8'"
-          :options="this.fontOptions"
-          :active-font="this.fontFamily"
-          @change="this.changeFont">
-        </font-picker>
+        <select :value="fontFamily" @change="changeFont($event.target.value)">
+          <option v-for="family in fontFamilies" :key="family" :value="family">{{ family }}</option>
+        </select>
       </div>
 
       <div class="row" v-show="this.exists(options.csv)">
@@ -265,29 +262,23 @@
 </template>
 
 <script>
-  import FontPicker from 'font-picker-vue';
+  import { bus } from '@/app/bus'
+  import Papa from 'papaparse'
+  import { loadGoogleFont } from '@/app/fonts'
   // import { Material } from 'vue-color';
 
   export default {
     name: 'Sidebar',
-    components: {
-      FontPicker//, Material
-    },
     data() {
       return {
         csvResult: '',
         options: {},
         fontFamily: 'Karla',
-        fontOptions: {
-          limit: 20,
-          families: ['Karla', 'Roboto', 'Montserrat', 'Overpass', 'Lato', 'Roboto Condensed', 'Oswald', 'Roboto Slab', 'Muli', 'Fira Sans', 'Work Sans', 'Titillium Web', 'Barlow'],
-          categories: ['sans-serif'],
-          variants: ['regular', '700']
-        }
+        fontFamilies: ['Karla', 'Roboto', 'Montserrat', 'Overpass', 'Lato', 'Roboto Condensed', 'Oswald', 'Roboto Slab', 'Fira Sans', 'Work Sans', 'Titillium Web', 'Barlow']
       }
     },
     mounted() {
-      this.$root.$on('mounted', options => {
+      bus.on('mounted', options => {
           this.options = options
           this.changeColors()
       });
@@ -302,32 +293,33 @@
         var csv = document.getElementById('importCSV').files[0];
         var result = {}
         var $vm = this;
-        this.$papa.parse(csv, {
+        Papa.parse(csv, {
           complete: function(results) {
               $vm.sendCSV(results.data)
           }
         });
       },
       sendCSV(results) {
-        this.$root.$emit('csvImported', results)
+        bus.emit('csvImported', results)
       },
       getData() {
-        this.$root.$emit('getData')
+        bus.emit('getData')
       },
       updateOptions() {
-        this.$root.$emit('updatedObjects', this.options)
+        bus.emit('updatedObjects', this.options)
       },
       exists(option) {
         if(typeof option !== "undefined") {
           return true;
         }
       },
-      changeFont(newFont) {
-        this.fontFamily = newFont.family
-        this.$root.$emit('fontChanged', this.fontFamily)
+      changeFont(family) {
+        this.fontFamily = family
+        loadGoogleFont(family)
+        bus.emit('fontChanged', this.fontFamily)
       },
       changeColors() {
-        this.$root.$emit('colorsChanged', this.options.colors)
+        bus.emit('colorsChanged', this.options.colors)
       },
       setLayout(x, y) {
         var text = document.getElementById('text');

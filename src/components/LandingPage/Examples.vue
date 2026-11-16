@@ -20,9 +20,9 @@
       </ul>
     </div>
 
-    <router-link to="/demo" tag="button" type="button" class="primary">
+    <router-link to="/demo" custom v-slot="{ navigate }"><button type="button" class="primary" @click="navigate">
       Try the demo
-    </router-link>
+    </button></router-link>
   </section>
 </template>
 

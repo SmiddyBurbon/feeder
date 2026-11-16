@@ -1,7 +1,7 @@
 <template>
   <div id="canvas" :style="cssVars">
     <div class="headline">
-      <div class="country" v-if="this.venue.country"><img :src="'img/eformel/flags/' + this.venue.country + '.png'" /></div>
+      <div class="country" v-if="this.venue.country"><img :src="'/img/eformel/flags/' + this.venue.country + '.png'" /></div>
       <div class="event">
         <h1><input class="inputH1" type="text" v-model="venue.title" @blur="updateEvent($event.target.value)" /></h1>
         <h2><input class="inputH2" @blur="updateEvent($event.target.value)" v-model="venue.subline" type="text" placeholder="E-Prix" /></h2>
@@ -22,7 +22,7 @@
             <label :for="'flag-input-' + object.index">
               <img
                 class="flag"
-                :src="'img/eformel/flags/' + object.country + '.png'"
+                :src="'/img/eformel/flags/' + object.country + '.png'"
               />
             </label>
             <input :id="'flag-input-' + object.index" type="file" @change="changeFlag(object.index)" />
@@ -48,7 +48,7 @@
               <img
                 class="car"
                 v-if="options.cars"
-                :src="'img/eformel/cars/' + object.car + '.png'"
+                :src="'/img/eformel/cars/' + object.car + '.png'"
               />
             </label>
             <input :id="'car-input-' + object.index" type="file" @change="changeCar(object.index)" />
@@ -67,12 +67,14 @@
 
     <div class="watermark">
       <p>Created with<br /><strong>feeder.vercel.app</strong></p>
-      <img id="logo" class="small" src="img/icons/ic_logo.svg" />
+      <img id="logo" class="small" src="/img/icons/ic_logo.svg" />
     </div>
   </div>
 </template>
 
 <script>
+  import { bus } from '@/app/bus'
+  import { http } from '@/app/http'
   import { getCountry } from '../../assets/js/eformel.js'
 
   export default {
@@ -127,13 +129,13 @@
         this.venue.country = ''
       }
 
-      this.$root.$emit('mounted', this.options)
+      bus.emit('mounted', this.options)
 
-      this.$root.$on('csvImported', results => {
+      bus.on('csvImported', results => {
         this.parseCSV(results)
       })
 
-      this.$root.$on('updatedObjects', options => {
+      bus.on('updatedObjects', options => {
           if(options.lines < this.objects.length) {
             let diff = this.objects.length - options.lines
             for (var i = 0; i < diff; i++) {
@@ -196,7 +198,7 @@
       },
       updateName(i, input) {
         var driver = this.objects[i]
-        this.axios.get('json/eformel_202021.json').then((response) => {
+        http.get('/json/eformel_202021.json').then((response) => {
           for (var j = 0; j < response.data.length; j++) {
             if(input != "" && input != " ") {
               if(response.data[j].name.toLowerCase().includes(input) || response.data[j].name.toLowerCase() == input.toLowerCase() || response.data[j].tla.toLowerCase().includes(input) || response.data[j].number == input) {

@@ -2,10 +2,8 @@
   <header>
     <div class="back" v-if="isStudio()" @click="this.goBack"><img src="../assets/img/icons/ic_back.svg" /><span>Back</span></div>
     <div v-if="!(isStudio())" class="name">
-      <router-link to="/"><img src="../assets/img/ic_logo.svg" class="logo" alt="kinyu" /></router-link>
-      <p>{{ name }}</p>
+      <router-link to="/"><img src="../assets/img/ic_logo.svg" class="logo" alt="Feeder" /></router-link>
     </div>
-    <a v-if="isLoggedIn" class="logout" @click="logout"><img src="../assets/img/icons/ic_logout.svg" /></a>
     <!--<div class="profile" v-if="isLoggedIn">
       <img src="../assets/img/logo_eformel.png" class="avatar" />
       <ul class="dropdown">
@@ -16,66 +14,16 @@
 </template>
 
 <script>
-  import firebase from 'firebase'
-  import { db } from '../main'
-
   export default {
     name: 'Header',
-    props: [
-      'isLoggedIn'
-    ],
-    data() {
-      return {
-        name: ''
-      }
-    },
     methods: {
       isStudio() {
-        if (this.$route.path.includes("studio")) {
-          return true
-        }
-        else {
-          return false
-        }
+        return this.$route.path.includes('studio')
       },
       goBack() {
-        window.history.length > 1 ? this.$router.go(-1) : this.$router.push('/')
-      },
-      logout() {
-        this.$root.$emit('loggedOut')
-
-        firebase.auth().signOut().then(() => {
-          this.$router.push('login')
-        })
+        if (window.history.length > 1) this.$router.go(-1)
+        else this.$router.push('/')
       }
-    },
-    mounted() {
-      let $vm = this;
-
-      this.$root.$on('loggedIn', function() {
-        var user = firebase.auth().currentUser;
-        var usersRef = db.collection("users").doc(user.uid);
-        var team = '';
-        var teamsRef = '';
-
-        usersRef.get().then(function(doc) {
-          team = doc.data().team;
-
-          teamsRef = db.collection("teams").doc(team);
-
-          teamsRef.get().then(function(teamDoc) {
-            $vm.name = teamDoc.data().name
-          }).catch(function(error) {
-              console.log("Error getting document:", error);
-          });
-        }).catch(function(error) {
-            console.log("Error getting document:", error);
-        });
-      });
-
-      this.$root.$on('loggedOut', function() {
-        $vm.name = ''
-      });
     }
   }
 </script>
