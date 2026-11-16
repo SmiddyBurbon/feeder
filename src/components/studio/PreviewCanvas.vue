@@ -2,8 +2,10 @@
   <main id="main">
     <div id="preview">
       <RankingTemplate v-if="rankingVariant" :key="rankingVariant" :variant="rankingVariant"></RankingTemplate>
+      <!-- Disabled graphic types (re-enable together with the menu entries and the router redirect):
       <EFormelQuali v-if="isType('eformel_quali')"></EFormelQuali>
       <EFormelSchedule v-if="isType('eformel_schedule')"></EFormelSchedule>
+      -->
 
       <DemoTable v-if="isType('demo_table')"></DemoTable>
       <DemoScore v-if="isType('demo_score')"></DemoScore>
@@ -16,8 +18,8 @@
 
 <script>
   import RankingTemplate from '@/components/eformel/RankingTemplate.vue'
-  import EFormelQuali from '@/components/eformel/Quali.vue'
-  import EFormelSchedule from '@/components/eformel/Schedule.vue'
+  // import EFormelQuali from '@/components/eformel/Quali.vue'
+  // import EFormelSchedule from '@/components/eformel/Schedule.vue'
 
   import DemoTable from '@/components/demo/DemoTable.vue'
   import DemoScore from '@/components/demo/Score.vue'
@@ -28,13 +30,14 @@
   export default {
     name: 'PreviewCanvas',
     components: {
-      RankingTemplate, EFormelQuali, EFormelSchedule,
+      RankingTemplate, // EFormelQuali, EFormelSchedule,
       DemoTable, DemoScore, DemoFormulaE,
       FeederTable
     },
     computed: {
       rankingVariant() {
-        const variants = { eformel_results: 'results', eformel_drivers: 'drivers', eformel_teams: 'teams' }
+        // eformel_drivers: 'drivers' and eformel_teams: 'teams' are disabled for now (the variants still exist in rankingVariants.ts)
+        const variants = { eformel_results: 'results' }
         return variants[this.$route.query.type] ?? null
       }
     },

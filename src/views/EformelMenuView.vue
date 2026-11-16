@@ -11,10 +11,13 @@
             <span>Ergebnisse</span>
           </router-link>
         </li>
+        <!-- Currently only Ergebnisse is used. To bring the other graphic types back, uncomment these entries,
+             the matching lines in components/studio/PreviewCanvas.vue and the redirect in router.ts.
+             (Preview images for them no longer exist; add img/eformel/preview/<type>.png or drop the thumbnail.)
         <li>
           <router-link to="studio?type=eformel_drivers">
             <div class="thumb">
-              <img :src="'/img/eformel/preview/drivers.png'" /> <!-- TODO: preview image missing -->
+              <img :src="'/img/eformel/preview/drivers.png'" />
             </div>
             <span>Fahrerwertung</span>
           </router-link>
@@ -22,7 +25,7 @@
         <li>
           <router-link to="studio?type=eformel_teams">
             <div class="thumb">
-              <img :src="'/img/eformel/preview/teams.png'" /> <!-- TODO: preview image missing -->
+              <img :src="'/img/eformel/preview/teams.png'" />
             </div>
             <span>Teamwertung</span>
           </router-link>
@@ -30,7 +33,7 @@
          <li>
           <router-link to="studio?type=eformel_schedule">
             <div class="thumb">
-              <img :src="'/img/eformel/preview/schedule.png'" /> <!-- TODO: preview image missing -->
+              <img :src="'/img/eformel/preview/schedule.png'" />
             </div>
             <span>Rennkalender</span>
           </router-link>
@@ -43,6 +46,7 @@
             <span>Quali</span>
           </router-link>
         </li>
+        -->
       </ul>
     </div>
   </div>

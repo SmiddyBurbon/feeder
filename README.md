@@ -30,7 +30,7 @@ src/
   data/             Saison-Daten, Matching, Rennorte (siehe unten)
   app/              Hilfsfunktionen (Export, Bilder, Browser-Speicher, Uploads)
   assets/fonts.css  selbst gehostete Schriften (Karla, Roboto Condensed)
-public/img/eformel/ flags/ (Länder + Team-Wappen), cars/ (Liveries), bg/
+public/img/eformel/ flags/ (Länder + Team-Wappen), cars/ (Liveries), preview/
 scripts/            check-data.ts
 ```
 
@@ -66,9 +66,13 @@ Der PNG-Export rendert in 2-facher Größe (1024-px-Layout wird zu 2048 px). Ein
 durch normalen Text ersetzt (`src/app/export.ts`), weil html2canvas sie sonst ohne Großschreibung und falsch
 ausgerichtet zeichnet.
 
+## Aktive Grafiktypen
+
+Aktuell ist nur **Ergebnisse** aktiv. Fahrerwertung, Teamwertung, Quali und Rennkalender sind abgeschaltet (Menüeintrag,
+Vorschau und Router-Weiterleitung sind auskommentiert, der Code ist erhalten). Zum Reaktivieren die Kommentare in
+`views/EformelMenuView.vue`, `components/studio/PreviewCanvas.vue` und `router.ts` (`DISABLED_TYPES`) zurücknehmen.
+
 ## Bekannte Altlasten
 
 - Die Demo liest noch `public/json/eformel_202021.json` (altes Format).
-- `public/img/eformel/drivers` und `bg` werden vom Code nicht mehr benutzt.
 - Die Demo-Tabelle nutzt TheSportsDB, das inzwischen einen Premium-Key verlangt.
-- Im Eformel-Menü fehlen Vorschaubilder für Fahrerwertung, Teamwertung und Rennkalender.
