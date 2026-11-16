@@ -75,7 +75,7 @@
 <script>
   import { useEditorStore } from '@/stores/editor'
   import { http } from '@/app/http'
-  import { getCountry } from '../../assets/js/eformel.js'
+  import { countryForVenue } from '@/data/venues'
 
   export default {
     name: 'Results',
@@ -197,7 +197,7 @@
         console.log(this.objects)
       },
       setCountry(venue) {
-        this.venue.country = getCountry(venue)
+        this.venue.country = countryForVenue(venue)
       },
       updateName(i, input) {
         var driver = this.objects[i]

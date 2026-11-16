@@ -75,8 +75,9 @@
 <script>
   import { flagSrc, carSrc } from '@/app/assets'
   import { useEditorStore } from '@/stores/editor'
-  import { http } from '@/app/http'
-  import { getCountry } from '../../assets/js/eformel.js'
+  import { findEntry } from '@/data/match'
+  import { loadSeason } from '@/data/seasons'
+  import { countryForVenue } from '@/data/venues'
   import { rankingVariants } from './rankingVariants'
 
   export default {
@@ -197,23 +198,17 @@
         console.log(this.objects)
       },
       setCountry(venue) {
-        this.venue.country = getCountry(venue)
+        this.venue.country = countryForVenue(venue)
       },
-      updateName(i, input) {
-        var driver = this.objects[i]
-        http.get('/json/eformel_s13.json').then((response) => {
-          for (var j = 0; j < response.data.length; j++) {
-            if(input != "" && input != " ") {
-              if(response.data[j].name.toLowerCase().includes(input) || response.data[j].name.toLowerCase() == input.toLowerCase() || response.data[j].tla.toLowerCase().includes(input) || response.data[j].number == input) {
-                driver.name = response.data[j].name
-                driver.country = response.data[j].nationality
-                driver.car = response.data[j].team
+      async updateName(i, input) {
+        const match = findEntry(await loadSeason(), input)
+        if (!match) return
 
-                this.persistObjects(this.objects)
-              }
-            }
-          }
-        })
+        const row = this.objects[i]
+        row.name = match.name
+        row.country = match.flag
+        row.car = match.car
+        this.persistObjects(this.objects)
       },
       updatePosition(i, position) {
         this.objects[i].position = parseInt(position)

@@ -91,7 +91,7 @@
   import { flagSrc, carSrc } from '@/app/assets'
   import { useEditorStore } from '@/stores/editor'
   import { http } from '@/app/http'
-  import { getCountry } from '../../assets/js/eformel.js'
+  import { countryForVenue } from '@/data/venues'
 
   export default {
     name: 'Quali',
@@ -142,7 +142,7 @@
         this.persistVenue(this.venue)
       },
       setCountry(venue) {
-        this.venue.country = getCountry(venue)
+        this.venue.country = countryForVenue(venue)
         console.log('Here')
       },
       updateName(i, input) {

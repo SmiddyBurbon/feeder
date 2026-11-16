@@ -1,0 +1,392 @@
+{
+  "id": "202021",
+  "label": "2020/21",
+  "teams": [
+    {
+      "id": "audi",
+      "name": "Audi Sport Abt Schaeffler",
+      "crest": "audi",
+      "car": "audi"
+    },
+    {
+      "id": "techeetah",
+      "name": "DS Techeetah",
+      "crest": "techeetah",
+      "car": "techeetah"
+    },
+    {
+      "id": "jaguar",
+      "name": "Jaguar Racing",
+      "crest": "jaguar",
+      "car": "jaguar"
+    },
+    {
+      "id": "bmw",
+      "name": "BMW i Andretti Motorsport",
+      "crest": "bmw",
+      "car": "bmw"
+    },
+    {
+      "id": "nissan",
+      "name": "Nissan e.dams",
+      "crest": "nissan",
+      "car": "nissan"
+    },
+    {
+      "id": "porsche",
+      "name": "TAG Heuer Porsche",
+      "crest": "porsche",
+      "car": "porsche"
+    },
+    {
+      "id": "mercedes",
+      "name": "Mercedes-EQ Formula E Team",
+      "crest": "mercedes",
+      "car": "mercedes"
+    },
+    {
+      "id": "virgin",
+      "name": "Envision Virgin Racing",
+      "crest": "virgin",
+      "car": "virgin"
+    },
+    {
+      "id": "nio",
+      "name": "NIO 333",
+      "crest": "nio",
+      "car": "nio"
+    },
+    {
+      "id": "dragon",
+      "name": "Dragon / Penske Autosport",
+      "crest": "dragon",
+      "car": "dragon"
+    },
+    {
+      "id": "mahindra",
+      "name": "Mahindra Racing",
+      "crest": "mahindra",
+      "car": "mahindra"
+    },
+    {
+      "id": "venturi",
+      "name": "ROKiT Venturi Racing",
+      "crest": "venturi",
+      "car": "venturi"
+    }
+  ],
+  "drivers": [
+    {
+      "number": 4,
+      "name": "Robin Frijns",
+      "code": "FRI",
+      "country": "nl",
+      "team": "virgin"
+    },
+    {
+      "number": 5,
+      "name": "Stoffel Vandoorne",
+      "code": "VAN",
+      "country": "be",
+      "team": "mercedes"
+    },
+    {
+      "number": 6,
+      "name": "Nico Müller",
+      "code": "MUL",
+      "country": "ch",
+      "team": "dragon"
+    },
+    {
+      "number": 6,
+      "name": "Joel Eriksson",
+      "code": "ERI",
+      "country": "se",
+      "team": "dragon"
+    },
+    {
+      "number": 7,
+      "name": "Sergio Sette Camara",
+      "code": "SET",
+      "country": "br",
+      "team": "dragon"
+    },
+    {
+      "number": 8,
+      "name": "Oliver Turvey",
+      "code": "TUR",
+      "country": "uk",
+      "team": "nio"
+    },
+    {
+      "number": 10,
+      "name": "Sam Bird",
+      "code": "BIR",
+      "country": "uk",
+      "team": "jaguar"
+    },
+    {
+      "number": 11,
+      "name": "Lucas di Grassi",
+      "code": "DIG",
+      "country": "br",
+      "team": "audi"
+    },
+    {
+      "number": 13,
+      "name": "Antonio Felix da Costa",
+      "code": "DAC",
+      "country": "pt",
+      "team": "techeetah"
+    },
+    {
+      "number": 17,
+      "name": "Nyck de Vries",
+      "code": "DEV",
+      "country": "nl",
+      "team": "mercedes"
+    },
+    {
+      "number": 20,
+      "name": "Mitch Evans",
+      "code": "EVA",
+      "country": "nz",
+      "team": "jaguar"
+    },
+    {
+      "number": 22,
+      "name": "Oliver Rowland",
+      "code": "ROW",
+      "country": "uk",
+      "team": "nissan"
+    },
+    {
+      "number": 23,
+      "name": "Sebastien Buemi",
+      "code": "BUE",
+      "country": "ch",
+      "team": "nissan"
+    },
+    {
+      "number": 25,
+      "name": "Jean-Eric Vergne",
+      "code": "JEV",
+      "country": "fr",
+      "team": "techeetah"
+    },
+    {
+      "number": 27,
+      "name": "Jake Dennis",
+      "code": "DEN",
+      "country": "uk",
+      "team": "bmw"
+    },
+    {
+      "number": 28,
+      "name": "Maximilian Günther",
+      "code": "GUN",
+      "country": "de",
+      "team": "bmw"
+    },
+    {
+      "number": 29,
+      "name": "Alexander Sims",
+      "code": "SIM",
+      "country": "uk",
+      "team": "mahindra"
+    },
+    {
+      "number": 33,
+      "name": "Rene Rast",
+      "code": "RAS",
+      "country": "de",
+      "team": "audi"
+    },
+    {
+      "number": 36,
+      "name": "Andre Lotterer",
+      "code": "LOT",
+      "country": "de",
+      "team": "porsche"
+    },
+    {
+      "number": 37,
+      "name": "Nick Cassidy",
+      "code": "CAS",
+      "country": "nz",
+      "team": "virgin"
+    },
+    {
+      "number": 48,
+      "name": "Edoardo Mortara",
+      "code": "MOR",
+      "country": "ch",
+      "team": "venturi"
+    },
+    {
+      "number": 71,
+      "name": "Norman Nato",
+      "code": "NAT",
+      "country": "fr",
+      "team": "venturi"
+    },
+    {
+      "number": 88,
+      "name": "Tom Blomqvist",
+      "code": "BLO",
+      "country": "uk",
+      "team": "nio"
+    },
+    {
+      "number": 94,
+      "name": "Alex Lynn",
+      "code": "LYN",
+      "country": "uk",
+      "team": "mahindra"
+    },
+    {
+      "number": 99,
+      "name": "Pascal Wehrlein",
+      "code": "WEH",
+      "country": "de",
+      "team": "porsche"
+    }
+  ],
+  "venues": [
+    {
+      "name": "Diriyya",
+      "code": "diriyya",
+      "country": "sa"
+    },
+    {
+      "name": "Rom",
+      "code": "rom",
+      "country": "it"
+    },
+    {
+      "name": "Valencia",
+      "code": "valencia",
+      "country": "es"
+    },
+    {
+      "name": "Monaco",
+      "code": "monaco",
+      "country": "mc"
+    },
+    {
+      "name": "Monte Carlo",
+      "code": "montecarlo",
+      "country": "mc"
+    },
+    {
+      "name": "Puebla",
+      "code": "Puebla",
+      "country": "mx"
+    },
+    {
+      "name": "Berlin",
+      "code": "berlin",
+      "country": "de"
+    },
+    {
+      "name": "New York",
+      "code": "newyork",
+      "country": "us"
+    },
+    {
+      "name": "London",
+      "code": "london",
+      "country": "uk"
+    },
+    {
+      "name": "Jakarta",
+      "code": "jakarta",
+      "country": "in"
+    },
+    {
+      "name": "Vancouver",
+      "code": "vancouver",
+      "country": "ca"
+    },
+    {
+      "name": "Marrakesch",
+      "code": "marrakesch",
+      "country": "ma"
+    },
+    {
+      "name": "Seoul",
+      "code": "seoul",
+      "country": "sk"
+    },
+    {
+      "name": "Paris",
+      "code": "paris",
+      "country": "fr"
+    },
+    {
+      "name": "Santiago",
+      "code": "santiago",
+      "country": "cl"
+    },
+    {
+      "name": "Mexiko-Stadt",
+      "code": "mexiko",
+      "country": "mx"
+    },
+    {
+      "name": "Sanya",
+      "code": "sanya",
+      "country": "cn"
+    },
+    {
+      "name": "Peking",
+      "code": "peking",
+      "country": "cn"
+    },
+    {
+      "name": "Putrajaya",
+      "code": "putrajaya",
+      "country": "my"
+    },
+    {
+      "name": "Buenos Aires",
+      "code": "buenosaires",
+      "country": "ar"
+    },
+    {
+      "name": "Punta del Este",
+      "code": "punta",
+      "country": "ur"
+    },
+    {
+      "name": "Bern",
+      "code": "bern",
+      "country": "ch"
+    },
+    {
+      "name": "Zürich",
+      "code": "zurich",
+      "country": "ch"
+    },
+    {
+      "name": "Hongkong",
+      "code": "hongkong",
+      "country": "hk"
+    },
+    {
+      "name": "Montreal",
+      "code": "montreal",
+      "country": "ca"
+    },
+    {
+      "name": "Eindhoven",
+      "code": "eindhoven",
+      "country": "nl"
+    },
+    {
+      "name": "Kapstadt",
+      "code": "kapstadt",
+      "country": "za"
+    }
+  ]
+}

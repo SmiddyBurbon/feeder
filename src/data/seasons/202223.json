@@ -1,0 +1,307 @@
+{
+  "id": "202223",
+  "label": "2022/23",
+  "teams": [
+    {
+      "id": "jaguar",
+      "name": "Jaguar TCS Racing",
+      "crest": "jaguar",
+      "car": "jaguar"
+    },
+    {
+      "id": "andretti",
+      "name": "Avalanche Andretti",
+      "crest": "andretti",
+      "car": "andretti"
+    },
+    {
+      "id": "nissan",
+      "name": "Nissan",
+      "crest": "nissan",
+      "car": "nissan"
+    },
+    {
+      "id": "porsche",
+      "name": "TAG Heuer Porsche",
+      "crest": "porsche",
+      "car": "porsche"
+    },
+    {
+      "id": "envision",
+      "name": "Envision Racing",
+      "crest": "envision",
+      "car": "envision"
+    },
+    {
+      "id": "nio",
+      "name": "Nio 333 Racing",
+      "crest": "nio",
+      "car": "nio"
+    },
+    {
+      "id": "ds",
+      "name": "DS Penske",
+      "crest": "ds",
+      "car": "ds"
+    },
+    {
+      "id": "mahindra",
+      "name": "Mahindra Racing",
+      "crest": "mahindra",
+      "car": "mahindra"
+    },
+    {
+      "id": "maserati",
+      "name": "Maserati MSG Racing",
+      "crest": "maserati",
+      "car": "maserati"
+    },
+    {
+      "id": "mclaren",
+      "name": "Neom McLaren",
+      "crest": "mclaren",
+      "car": "mclaren"
+    },
+    {
+      "id": "abt",
+      "name": "ABT Cupra",
+      "crest": "abt",
+      "car": "abt"
+    }
+  ],
+  "drivers": [
+    {
+      "number": 9,
+      "name": "Mitch Evans",
+      "code": "EVA",
+      "country": "nz",
+      "team": "jaguar"
+    },
+    {
+      "number": 10,
+      "name": "Sam Bird",
+      "code": "BIR",
+      "country": "uk",
+      "team": "jaguar"
+    },
+    {
+      "number": 13,
+      "name": "Antonio Felix da Costa",
+      "code": "DAC",
+      "country": "pt",
+      "team": "porsche"
+    },
+    {
+      "number": 94,
+      "name": "Pascal Wehrlein",
+      "code": "WEH",
+      "country": "de",
+      "team": "porsche"
+    },
+    {
+      "number": 27,
+      "name": "Jake Dennis",
+      "code": "DEN",
+      "country": "uk",
+      "team": "andretti"
+    },
+    {
+      "number": 36,
+      "name": "Andre Lotterer",
+      "code": "LOT",
+      "country": "de",
+      "team": "andretti"
+    },
+    {
+      "number": 8,
+      "name": "Roberto Merhi",
+      "code": "MER",
+      "country": "es",
+      "team": "mahindra"
+    },
+    {
+      "number": 11,
+      "name": "Lucas di Grassi",
+      "code": "DIG",
+      "country": "br",
+      "team": "mahindra"
+    },
+    {
+      "number": 33,
+      "name": "Dan Ticktum",
+      "code": "TIC",
+      "country": "uk",
+      "team": "nio"
+    },
+    {
+      "number": 3,
+      "name": "Sergio Sette Camara",
+      "code": "SET",
+      "country": "br",
+      "team": "nio"
+    },
+    {
+      "number": 37,
+      "name": "Nick Cassidy",
+      "code": "CAS",
+      "country": "nz",
+      "team": "envision"
+    },
+    {
+      "number": 16,
+      "name": "Sebastien Buemi",
+      "code": "BUE",
+      "country": "ch",
+      "team": "envision"
+    },
+    {
+      "number": 1,
+      "name": "Stoffel Vandoorne",
+      "code": "VAN",
+      "country": "be",
+      "team": "ds"
+    },
+    {
+      "number": 25,
+      "name": "Jean-Eric Vergne",
+      "code": "JEV",
+      "country": "fr",
+      "team": "ds"
+    },
+    {
+      "number": 7,
+      "name": "Maximilian Günther",
+      "code": "GUN",
+      "country": "de",
+      "team": "maserati"
+    },
+    {
+      "number": 48,
+      "name": "Edoardo Mortara",
+      "code": "MOR",
+      "country": "ch",
+      "team": "maserati"
+    },
+    {
+      "number": 17,
+      "name": "Norman Nato",
+      "code": "NAT",
+      "country": "fr",
+      "team": "nissan"
+    },
+    {
+      "number": 23,
+      "name": "Sacha Fenestraz",
+      "code": "FEN",
+      "country": "fr",
+      "team": "nissan"
+    },
+    {
+      "number": 58,
+      "name": "Rene Rast",
+      "code": "RAS",
+      "country": "de",
+      "team": "mclaren"
+    },
+    {
+      "number": 5,
+      "name": "Jake Hughes",
+      "code": "HUG",
+      "country": "uk",
+      "team": "mclaren"
+    },
+    {
+      "number": 4,
+      "name": "Robin Frijns",
+      "code": "FRI",
+      "country": "nl",
+      "team": "abt"
+    },
+    {
+      "number": 4,
+      "name": "Robin Frijns",
+      "code": "FRI",
+      "country": "nl",
+      "team": "abt"
+    },
+    {
+      "number": 51,
+      "name": "Nico Müller",
+      "code": "MUL",
+      "country": "ch",
+      "team": "abt"
+    }
+  ],
+  "venues": [
+    {
+      "name": "Diriyya",
+      "code": "diriyya",
+      "country": "sa"
+    },
+    {
+      "name": "Rom",
+      "code": "rom",
+      "country": "it"
+    },
+    {
+      "name": "Valencia",
+      "code": "valencia",
+      "country": "es"
+    },
+    {
+      "name": "Monaco",
+      "code": "monaco",
+      "country": "mc"
+    },
+    {
+      "name": "Monte Carlo",
+      "code": "montecarlo",
+      "country": "mc"
+    },
+    {
+      "name": "Berlin",
+      "code": "berlin",
+      "country": "de"
+    },
+    {
+      "name": "London",
+      "code": "london",
+      "country": "uk"
+    },
+    {
+      "name": "Jakarta",
+      "code": "jakarta",
+      "country": "id"
+    },
+    {
+      "name": "Seoul",
+      "code": "seoul",
+      "country": "sk"
+    },
+    {
+      "name": "Paris",
+      "code": "paris",
+      "country": "fr"
+    },
+    {
+      "name": "Mexiko-Stadt",
+      "code": "mexiko",
+      "country": "mx"
+    },
+    {
+      "name": "Kapstadt",
+      "code": "kapstadt",
+      "country": "za"
+    },
+    {
+      "name": "Hyderabad",
+      "code": "hyderabad",
+      "country": "in"
+    },
+    {
+      "name": "Sao Paulo",
+      "code": "saopaulo",
+      "country": "br"
+    }
+  ]
+}

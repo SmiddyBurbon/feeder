@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
+    "build": "npm run check:data && vue-tsc --noEmit && vite build",
     "preview": "vite preview",
     "typecheck": "vue-tsc --noEmit",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "test": "vitest run",
+    "check:data": "node scripts/check-data.ts"
   },
   "engines": {
     "node": ">=22.12"
@@ -20,7 +22,8 @@
     "papaparse": "^5.7.1",
     "pinia": "^4.1.0",
     "vue": "^3.5.45",
-    "vue-router": "^5.5.1"
+    "vue-router": "^5.5.1",
+    "zod": "^4.6.7"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
@@ -34,6 +37,7 @@
     "typescript": "~6.0.3",
     "typescript-eslint": "^8.72.2",
     "vite": "^8.3.8",
+    "vitest": "^5.1.0",
     "vue-tsc": "^3.3.14"
   }
 }

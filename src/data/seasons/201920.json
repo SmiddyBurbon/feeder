@@ -1,0 +1,284 @@
+{
+  "id": "201920",
+  "label": "2019/20",
+  "teams": [
+    {
+      "id": "audi",
+      "name": "Audi Sport Abt Schaeffler",
+      "crest": "audi",
+      "car": "audi"
+    },
+    {
+      "id": "techeetah",
+      "name": "DS Techeetah",
+      "crest": "techeetah",
+      "car": "techeetah"
+    },
+    {
+      "id": "jaguar",
+      "name": "Panasonic Jaguar Racing",
+      "crest": "jaguar",
+      "car": "jaguar"
+    },
+    {
+      "id": "bmw",
+      "name": "BMW i Andretti Motorsport",
+      "crest": "bmw",
+      "car": "bmw"
+    },
+    {
+      "id": "nissan",
+      "name": "Nissan e.dams",
+      "crest": "nissan",
+      "car": "nissan"
+    },
+    {
+      "id": "porsche",
+      "name": "TAG Heuer Porsche",
+      "crest": "porsche",
+      "car": "porsche"
+    },
+    {
+      "id": "mercedes",
+      "name": "Mercedes-Benz EQ",
+      "crest": "mercedes",
+      "car": "mercedes"
+    },
+    {
+      "id": "virgin",
+      "name": "Envision Virgin Racing",
+      "crest": "virgin",
+      "car": "virgin"
+    },
+    {
+      "id": "nio",
+      "name": "NIO 333",
+      "crest": "nio",
+      "car": "nio"
+    },
+    {
+      "id": "dragon",
+      "name": "GEOX Dragon",
+      "crest": "dragon",
+      "car": "dragon"
+    },
+    {
+      "id": "mahindra",
+      "name": "Mahindra Racing",
+      "crest": "mahindra",
+      "car": "mahindra"
+    },
+    {
+      "id": "venturi",
+      "name": "ROKiT Venturi Racing",
+      "crest": "venturi",
+      "car": "venturi"
+    }
+  ],
+  "drivers": [
+    {
+      "number": 2,
+      "name": "Sam Bird",
+      "code": "BIR",
+      "country": "uk",
+      "team": "virgin"
+    },
+    {
+      "number": 3,
+      "name": "Oliver Turvey",
+      "code": "TUR",
+      "country": "uk",
+      "team": "nio"
+    },
+    {
+      "number": 4,
+      "name": "Robin Frijns",
+      "code": "FRI",
+      "country": "nl",
+      "team": "virgin"
+    },
+    {
+      "number": 5,
+      "name": "Stoffel Vandoorne",
+      "code": "VAN",
+      "country": "be",
+      "team": "mercedes"
+    },
+    {
+      "number": 6,
+      "name": "Brendon Hartley",
+      "code": "HAR",
+      "country": "nz",
+      "team": "dragon"
+    },
+    {
+      "number": 7,
+      "name": "Nico Müller",
+      "code": "MUL",
+      "country": "ch",
+      "team": "dragon"
+    },
+    {
+      "number": 11,
+      "name": "Lucas di Grassi",
+      "code": "DIG",
+      "country": "br",
+      "team": "audi"
+    },
+    {
+      "number": 13,
+      "name": "Antonio Felix da Costa",
+      "code": "DAC",
+      "country": "pt",
+      "team": "techeetah"
+    },
+    {
+      "number": 17,
+      "name": "Nyck de Vries",
+      "code": "DEV",
+      "country": "nl",
+      "team": "mercedes"
+    },
+    {
+      "number": 18,
+      "name": "Neel Jani",
+      "code": "JAN",
+      "country": "ch",
+      "team": "porsche"
+    },
+    {
+      "number": 19,
+      "name": "Felipe Massa",
+      "code": "MAS",
+      "country": "br",
+      "team": "venturi"
+    },
+    {
+      "number": 20,
+      "name": "Mitch Evans",
+      "code": "EVA",
+      "country": "nz",
+      "team": "jaguar"
+    },
+    {
+      "number": 22,
+      "name": "Oliver Rowland",
+      "code": "ROW",
+      "country": "uk",
+      "team": "nissan"
+    },
+    {
+      "number": 23,
+      "name": "Sebastien Buemi",
+      "code": "BUE",
+      "country": "ch",
+      "team": "nissan"
+    },
+    {
+      "number": 25,
+      "name": "Jean-Eric Vergne",
+      "code": "JEV",
+      "country": "fr",
+      "team": "techeetah"
+    },
+    {
+      "number": 27,
+      "name": "Alexander Sims",
+      "code": "SIM",
+      "country": "uk",
+      "team": "bmw"
+    },
+    {
+      "number": 28,
+      "name": "Maximilian Günther",
+      "code": "GUN",
+      "country": "de",
+      "team": "bmw"
+    },
+    {
+      "number": 33,
+      "name": "Qing Hua Ma",
+      "code": "QIN",
+      "country": "cn",
+      "team": "nio"
+    },
+    {
+      "number": 36,
+      "name": "Andre Lotterer",
+      "code": "LOT",
+      "country": "de",
+      "team": "porsche"
+    },
+    {
+      "number": 48,
+      "name": "Edoardo Mortara",
+      "code": "MOR",
+      "country": "ch",
+      "team": "venturi"
+    },
+    {
+      "number": 51,
+      "name": "James Calado",
+      "code": "CAL",
+      "country": "uk",
+      "team": "jaguar"
+    },
+    {
+      "number": 64,
+      "name": "Jerome d'Ambrosio",
+      "code": "DAM",
+      "country": "be",
+      "team": "mahindra"
+    },
+    {
+      "number": 66,
+      "name": "Daniel Abt",
+      "code": "ABT",
+      "country": "de",
+      "team": "audi"
+    },
+    {
+      "number": 94,
+      "name": "Pascal Wehrlein",
+      "code": "WEH",
+      "country": "de",
+      "team": "mahindra"
+    },
+    {
+      "number": 6,
+      "name": "Sergio Sette Camara",
+      "code": "SET",
+      "country": "br",
+      "team": "dragon"
+    },
+    {
+      "number": 33,
+      "name": "Daniel Abt",
+      "code": "ABT",
+      "country": "de",
+      "team": "nio"
+    },
+    {
+      "number": 51,
+      "name": "Tom Blomqvist",
+      "code": "BLO",
+      "country": "uk",
+      "team": "jaguar"
+    },
+    {
+      "number": 66,
+      "name": "Rene Rast",
+      "code": "RAS",
+      "country": "de",
+      "team": "audi"
+    },
+    {
+      "number": 94,
+      "name": "Alex Lynn",
+      "code": "LYN",
+      "country": "uk",
+      "team": "mahindra"
+    }
+  ],
+  "venues": []
+}
