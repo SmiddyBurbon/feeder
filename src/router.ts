@@ -1,18 +1,18 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import Landing from './components/Landing.vue'
-import Studio from './components/Studio.vue'
-import Demo from './components/demo/demo.vue'
-import eformel from './components/eformel/eformel.vue'
-import Feeder from './components/feeder/feeder.vue'
+import LandingView from './views/LandingView.vue'
+import StudioView from './views/StudioView.vue'
+import DemoMenuView from './views/DemoMenuView.vue'
+import EformelMenuView from './views/EformelMenuView.vue'
+import FeederMenuView from './views/FeederMenuView.vue'
 
 export default createRouter({
   history: createWebHistory(),
   routes: [
-    { path: '/', name: 'landing', component: Landing },
-    { path: '/eformel', name: 'eformel', component: eformel },
-    { path: '/demo', name: 'demo', component: Demo },
-    { path: '/feeder', name: 'feeder', component: Feeder },
-    { path: '/studio', name: 'studio', component: Studio },
+    { path: '/', name: 'landing', component: LandingView },
+    { path: '/eformel', name: 'eformel', component: EformelMenuView },
+    { path: '/demo', name: 'demo', component: DemoMenuView },
+    { path: '/feeder', name: 'feeder', component: FeederMenuView },
+    { path: '/studio', name: 'studio', component: StudioView },
     { path: '/:pathMatch(.*)*', redirect: '/' },
   ],
 })

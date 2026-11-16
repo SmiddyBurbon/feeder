@@ -1,11 +1,11 @@
 <template>
   <header>
-    <div class="back" v-if="isStudio()" @click="this.goBack"><img src="../assets/img/icons/ic_back.svg" /><span>Back</span></div>
+    <div class="back" v-if="isStudio()" @click="this.goBack"><img src="@/assets/img/icons/ic_back.svg" /><span>Back</span></div>
     <div v-if="!(isStudio())" class="name">
-      <router-link to="/"><img src="../assets/img/ic_logo.svg" class="logo" alt="Feeder" /></router-link>
+      <router-link to="/"><img src="@/assets/img/ic_logo.svg" class="logo" alt="Feeder" /></router-link>
     </div>
     <!--<div class="profile" v-if="isLoggedIn">
-      <img src="../assets/img/logo_eformel.png" class="avatar" />
+      <img src="@/assets/img/logo_eformel.png" class="avatar" />
       <ul class="dropdown">
         <li class="logout"><a @click="logout">Logout</a></li>
       </ul>
@@ -15,7 +15,7 @@
 
 <script>
   export default {
-    name: 'Header',
+    name: 'AppHeader',
     methods: {
       isStudio() {
         return this.$route.path.includes('studio')

@@ -71,12 +71,12 @@
 </template>
 
 <script>
-  import { bus } from '@/app/bus'
+  import { useEditorStore } from '@/stores/editor'
   import { http } from '@/app/http'
   import { getClub } from '../../assets/js/demo.js'
 
   export default {
-    name: 'Table',
+    name: 'DemoTable',
     props: [
       'cars',
       'gap',
@@ -106,7 +106,8 @@
     },
     mounted() {
       this.createList()
-      bus.emit('mounted', this.options)
+      const editor = useEditorStore()
+      editor.registerOptions(this.options)
 
       http
         .get('https://www.thesportsdb.com/api/v1/json/1/lookuptable.php?l=4328&s=2020-2021')
@@ -116,7 +117,7 @@
           )
         );
 
-      bus.on('getData', () => {
+      this.$watch(() => editor.autoFillRequests, () => {
         http
           .get('https://www.thesportsdb.com/api/v1/json/1/lookuptable.php?l=4328&s=2020-2021')
           .then(
@@ -126,7 +127,8 @@
           );
       });
 
-      bus.on('updatedObjects', options => {
+      this.$watch(() => editor.optionsRevision, () => {
+          const options = editor.options
           document.getElementById('canvas').style.backgroundPositionX = (100-options.bgX) + "%";
 
           if(options.lines < this.objects.length) {

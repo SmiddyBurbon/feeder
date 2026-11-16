@@ -52,9 +52,9 @@
 </template>
 
 <script>
-  import { bus } from '@/app/bus'
+  import { useEditorStore } from '@/stores/editor'
   export default {
-    name: 'Results',
+    name: 'FeederTable',
     props: [
       'cars',
       'gap',
@@ -88,19 +88,22 @@
     },
     mounted() {
       this.createList()
-      bus.emit('mounted', this.options)
+      const editor = useEditorStore()
+      editor.registerOptions(this.options)
 
-      bus.on('fontChanged', newFont => {
+      this.$watch(() => editor.font, newFont => {
         this.updateFont(newFont)
       })
 
-      bus.on('colorsChanged', colors => {
+      this.$watch(() => editor.colors, colors => {
+        if (!colors) return
         console.log(colors)
         this.options.colors.primary = colors.primary
         this.options.colors.secondary = colors.secondary
       })
 
-      bus.on('updatedObjects', options => {
+      this.$watch(() => editor.optionsRevision, () => {
+          const options = editor.options
           if(options.lines < this.objects.length) {
             let diff = this.objects.length - options.lines
             for (var i = 0; i < diff; i++) {

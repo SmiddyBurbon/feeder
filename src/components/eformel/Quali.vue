@@ -89,7 +89,7 @@
 
 <script>
   import { flagSrc, carSrc } from '@/app/assets'
-  import { bus } from '@/app/bus'
+  import { useEditorStore } from '@/stores/editor'
   import { http } from '@/app/http'
   import { getCountry } from '../../assets/js/eformel.js'
 
@@ -131,7 +131,8 @@
         this.venue.country = ''
       }
 
-      bus.emit('mounted', this.options)
+      const editor = useEditorStore()
+      editor.registerOptions(this.options)
     },
     methods: {
       flagSrc,

@@ -1,9 +1,7 @@
 <template>
   <main id="main">
     <div id="preview">
-      <EFormelResults v-if="isType('eformel_results')"></EFormelResults>
-      <EFormelDrivers v-if="isType('eformel_drivers')"></EFormelDrivers>
-      <EFormelTeams v-if="isType('eformel_teams')"></EFormelTeams>
+      <RankingTemplate v-if="rankingVariant" :key="rankingVariant" :variant="rankingVariant"></RankingTemplate>
       <EFormelQuali v-if="isType('eformel_quali')"></EFormelQuali>
       <EFormelSchedule v-if="isType('eformel_schedule')"></EFormelSchedule>
 
@@ -11,30 +9,34 @@
       <DemoScore v-if="isType('demo_score')"></DemoScore>
       <DemoFormulaE v-if="isType('demo_formulae')"></DemoFormulaE>
 
-      <Table v-if="isType('feeder_table')"></Table>
+      <FeederTable v-if="isType('feeder_table')"></FeederTable>
     </div>
   </main>
 </template>
 
 <script>
-  import EFormelResults from './eformel/Results.vue'
-  import EFormelDrivers from './eformel/Drivers.vue'
-  import EFormelTeams from './eformel/Teams.vue'
-  import EFormelQuali from './eformel/Quali.vue'
-  import EFormelSchedule from './eformel/Schedule.vue'
+  import RankingTemplate from '@/components/eformel/RankingTemplate.vue'
+  import EFormelQuali from '@/components/eformel/Quali.vue'
+  import EFormelSchedule from '@/components/eformel/Schedule.vue'
 
-  import DemoTable from './demo/Table.vue'
-  import DemoScore from './demo/Score.vue'
-  import DemoFormulaE from './demo/FormulaE.vue'
+  import DemoTable from '@/components/demo/DemoTable.vue'
+  import DemoScore from '@/components/demo/Score.vue'
+  import DemoFormulaE from '@/components/demo/FormulaE.vue'
 
-  import Table from './feeder/Table.vue'
+  import FeederTable from '@/components/feeder/FeederTable.vue'
 
   export default {
-    name: 'Main',
+    name: 'PreviewCanvas',
     components: {
-      EFormelResults, EFormelDrivers, EFormelTeams, EFormelQuali, EFormelSchedule,
+      RankingTemplate, EFormelQuali, EFormelSchedule,
       DemoTable, DemoScore, DemoFormulaE,
-      Table
+      FeederTable
+    },
+    computed: {
+      rankingVariant() {
+        const variants = { eformel_results: 'results', eformel_drivers: 'drivers', eformel_teams: 'teams' }
+        return variants[this.$route.query.type] ?? null
+      }
     },
     mounted() {
       this.resizeCanvas()
@@ -43,7 +45,7 @@
       resizeCanvas() {
         var preview = document.getElementById('preview');
         var main = document.getElementById('main');
-        var factor = 0
+        let factor
 
         if (preview.getBoundingClientRect().height > preview.getBoundingClientRect().width) {
           factor = (main.clientHeight) / (preview.clientHeight);
@@ -76,7 +78,7 @@
 <style scoped>
   main {
     background-color: var(--bg-grey);
-    background-image: url('../assets/img/bg_pattern.svg');
+    background-image: url('@/assets/img/bg_pattern.svg');
     display: flex;
     align-items: center;
     justify-content: center;

@@ -56,7 +56,7 @@
 
 <script>
   import AutoTextarea from '@/components/AutoTextarea.vue'
-  import { bus } from '@/app/bus'
+  import { useEditorStore } from '@/stores/editor'
   import { getClub } from '../../assets/js/demo.js'
 
   export default {
@@ -90,9 +90,11 @@
       }
     },
     mounted() {
-      bus.emit('mounted', this.options)
+      const editor = useEditorStore()
+      editor.registerOptions(this.options)
 
-      bus.on('updatedObjects', options => {
+      this.$watch(() => editor.optionsRevision, () => {
+          const options = editor.options
           document.getElementById('canvas').style.backgroundPositionX = (100-options.bgX) + "%";
       });
       this.setDate()

@@ -262,51 +262,37 @@
 </template>
 
 <script>
-  import { bus } from '@/app/bus'
+  import { useEditorStore } from '@/stores/editor'
   import Papa from 'papaparse'
   import { loadGoogleFont } from '@/app/fonts'
   // import { Material } from 'vue-color';
 
   export default {
-    name: 'Sidebar',
+    name: 'StudioSidebar',
+    setup() {
+      return { editor: useEditorStore() }
+    },
     data() {
       return {
-        csvResult: '',
-        options: {},
         fontFamily: 'Karla',
         fontFamilies: ['Karla', 'Roboto', 'Montserrat', 'Overpass', 'Lato', 'Roboto Condensed', 'Oswald', 'Roboto Slab', 'Fira Sans', 'Work Sans', 'Titillium Web', 'Barlow']
       }
     },
-    mounted() {
-      bus.on('mounted', options => {
-          this.options = options
-          this.changeColors()
-      });
-    },
-    watch: {
-      csvResult(current) {
-        console.log(this.csvResult);
-      }
-    },
     methods: {
       parse() {
-        var csv = document.getElementById('importCSV').files[0];
-        var result = {}
-        var $vm = this;
+        const csv = document.getElementById('importCSV').files[0];
         Papa.parse(csv, {
-          complete: function(results) {
-              $vm.sendCSV(results.data)
-          }
+          complete: (results) => this.sendCSV(results.data)
         });
       },
       sendCSV(results) {
-        bus.emit('csvImported', results)
+        this.editor.importCsv(results)
       },
       getData() {
-        bus.emit('getData')
+        this.editor.requestAutoFill()
       },
       updateOptions() {
-        bus.emit('updatedObjects', this.options)
+        this.editor.notifyOptionsChanged()
       },
       exists(option) {
         if(typeof option !== "undefined") {
@@ -316,10 +302,10 @@
       changeFont(family) {
         this.fontFamily = family
         loadGoogleFont(family)
-        bus.emit('fontChanged', this.fontFamily)
+        this.editor.setFont(this.fontFamily)
       },
       changeColors() {
-        bus.emit('colorsChanged', this.options.colors)
+        this.editor.setColors(this.options.colors)
       },
       setLayout(x, y) {
         var text = document.getElementById('text');
@@ -363,6 +349,9 @@
       }
     },
     computed: {
+      options() {
+        return this.editor.options
+      },
       cssVars() {
         return {
           //'--primaryColor': this.options.colors.primary,
@@ -474,7 +463,7 @@
     display: inline-block;
     cursor: pointer;
     font-weight: 700;
-    background-image: url('../assets/img/icons/ic_upload.svg');
+    background-image: url('@/assets/img/icons/ic_upload.svg');
     background-repeat: no-repeat;
     background-position: right center;
     padding-right: 2rem;

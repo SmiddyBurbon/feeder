@@ -1,39 +1,30 @@
 <template>
   <main>
-    <Header></Header>
-    <Hero></Hero>
-    <Demo></Demo>
-    <Examples></Examples>
-    <Testimonials></Testimonials>
-    <About></About>
-    <Pricing></Pricing>
-    <Footer></Footer>
+    <LandingHeader></LandingHeader>
+    <LandingHero></LandingHero>
+    <LandingDemo></LandingDemo>
+    <LandingExamples></LandingExamples>
+    <LandingTestimonials></LandingTestimonials>
+    <LandingAbout></LandingAbout>
+    <LandingPricing></LandingPricing>
+    <LandingFooter></LandingFooter>
   </main>
 </template>
 
 <script>
-  import Header from './LandingPage/Header.vue'
-  import Hero from './LandingPage/Hero.vue'
-  import Demo from './LandingPage/Demo.vue'
-  import Examples from './LandingPage/Examples.vue'
-  import Testimonials from './LandingPage/Testimonials.vue'
-  import About from './LandingPage/About.vue'
-  import Pricing from './LandingPage/Pricing.vue'
-  import Footer from './LandingPage/Footer.vue'
+  import LandingHeader from '@/components/landing/LandingHeader.vue'
+  import LandingHero from '@/components/landing/LandingHero.vue'
+  import LandingDemo from '@/components/landing/LandingDemo.vue'
+  import LandingExamples from '@/components/landing/LandingExamples.vue'
+  import LandingTestimonials from '@/components/landing/LandingTestimonials.vue'
+  import LandingAbout from '@/components/landing/LandingAbout.vue'
+  import LandingPricing from '@/components/landing/LandingPricing.vue'
+  import LandingFooter from '@/components/landing/LandingFooter.vue'
 
   export default {
-    name: 'Landing',
+    name: 'LandingView',
     components: {
-      Header, Hero, Demo, Examples, Testimonials, About, Pricing, Footer
-    },
-    data() {
-      return {
-        name: ''
-      }
-    },
-    methods: {
-    },
-    mounted() {
+      LandingHeader, LandingHero, LandingDemo, LandingExamples, LandingTestimonials, LandingAbout, LandingPricing, LandingFooter
     }
   }
 </script>

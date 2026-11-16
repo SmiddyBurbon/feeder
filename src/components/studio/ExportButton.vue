@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="buttons">
-      <button id="download" class="primary" @click="downloadImage()">.PNG<img src="../assets/img/icons/ic_download.svg" /></button>
+      <button id="download" class="primary" @click="downloadImage()">.PNG<img src="@/assets/img/icons/ic_download.svg" /></button>
     </div>
     <div id="exportable"></div>
   </div>
@@ -12,7 +12,7 @@
   import { saveAs } from 'file-saver';
 
   export default {
-    name: 'Download',
+    name: 'ExportButton',
     data() {
       return {
       }

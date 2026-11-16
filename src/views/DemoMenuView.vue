@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Header></Header>
+    <AppHeader></AppHeader>
     <div class="menu">
       <ul>
         <li>
@@ -33,13 +33,11 @@
 </template>
 
 <script>
-import Header from '../Header.vue'
+import AppHeader from '@/components/AppHeader.vue'
 
 export default {
-  name: 'Menu',
-  components: {
-    Header
-  },
+  name: 'DemoMenuView',
+  components: { AppHeader },
   data() {
     return {};
   },

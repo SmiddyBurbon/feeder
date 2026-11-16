@@ -2,7 +2,7 @@
   <header>
     <div class="container row">
       <div class="logo">
-        <a href="#"><img src="../../assets/img/feeder_logo.svg" alt="feeder" /></a>
+        <a href="#"><img src="@/assets/img/feeder_logo.svg" alt="feeder" /></a>
       </div>
       <ul class="menu">
         <li>

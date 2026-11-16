@@ -7,7 +7,7 @@
 
       <ul class="grid three">
         <li>
-          <img src="../../assets/img/illu_templates.svg" alt="feeder" />
+          <img src="@/assets/img/illu_templates.svg" alt="feeder" />
           <div>
             <h4>Customized templates</h4>
             <p>
@@ -16,7 +16,7 @@
           </div>
         </li>
         <li>
-          <img src="../../assets/img/illu_devices.svg" alt="feeder" />
+          <img src="@/assets/img/illu_devices.svg" alt="feeder" />
           <div>
             <h4>Works on all devices</h4>
             <p>
@@ -25,7 +25,7 @@
           </div>
         </li>
         <li>
-          <img src="../../assets/img/illu_api.svg" alt="feeder" />
+          <img src="@/assets/img/illu_api.svg" alt="feeder" />
           <div>
             <h4>API integration</h4>
             <p>

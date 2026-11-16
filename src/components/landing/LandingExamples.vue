@@ -6,15 +6,15 @@
 
       <ul class="grid three">
         <li>
-          <img src="../../assets/img/examples/example_fe.png" alt="Results" />
+          <img src="@/assets/img/examples/example_fe.png" alt="Results" />
           <h4>Results</h4>
         </li>
         <li>
-          <img src="../../assets/img/examples/example_score.png" alt="Score" />
+          <img src="@/assets/img/examples/example_score.png" alt="Score" />
           <h4>Match Scores</h4>
         </li>
         <li>
-          <img src="../../assets/img/examples/example_news.png" alt="News" />
+          <img src="@/assets/img/examples/example_news.png" alt="News" />
           <h4>News Content</h4>
         </li>
       </ul>

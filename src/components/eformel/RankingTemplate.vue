@@ -33,7 +33,7 @@
           <input
             class="name"
             type="text"
-            placeholder="Driver"
+            :placeholder="config.placeholder"
             v-model="object.name"
             @blur="updateName(object.index, $event.target.value)"
           />
@@ -74,19 +74,16 @@
 
 <script>
   import { flagSrc, carSrc } from '@/app/assets'
-  import { bus } from '@/app/bus'
+  import { useEditorStore } from '@/stores/editor'
   import { http } from '@/app/http'
   import { getCountry } from '../../assets/js/eformel.js'
+  import { rankingVariants } from './rankingVariants'
 
   export default {
-    name: 'Drivers',
-    props: [
-      'cars',
-      'gap',
-      'lines',
-      'minLines',
-      'maxLines',
-    ],
+    name: 'RankingTemplate',
+    props: {
+      variant: { type: String, required: true }
+    },
     data() {
       return {
         venue: {
@@ -102,41 +99,44 @@
           bgimage: true,
           flags: true,
           cars: true,
-          gap: false,
+          gap: rankingVariants[this.variant].options.gap,
           lines: 11,
           minLines: 1,
           maxLines: 12,
-          sponsor: true,
-          points: true
+          sponsor: rankingVariants[this.variant].options.sponsor,
+          points: rankingVariants[this.variant].options.points
         }
       }
     },
     mounted() {
-      if(localStorage.EFormelDrivers) {
-        this.objects = JSON.parse(localStorage.getItem('EFormelDrivers'));
+      if(localStorage[this.config.storageKey]) {
+        this.objects = JSON.parse(localStorage.getItem(this.config.storageKey));
       }
       else {
         this.createList()
       }
 
-      if(localStorage.EFormelDriversVenue) {
-        this.venue.title = JSON.parse(localStorage.getItem('EFormelDrivers')).title;
-        this.venue.subline = JSON.parse(localStorage.getItem('EFormelDrivers')).subline;
-        this.venue.country = JSON.parse(localStorage.getItem('EFormelDrivers')).country;
+      if(localStorage[this.config.storageKey + 'Venue']) {
+        this.venue.title = JSON.parse(localStorage.getItem(this.config.storageKey + 'Venue')).title;
+        this.venue.subline = JSON.parse(localStorage.getItem(this.config.storageKey + 'Venue')).subline;
+        this.venue.country = JSON.parse(localStorage.getItem(this.config.storageKey + 'Venue')).country;
       }
       else {
-        this.venue.title = 'Fahrerwertung'
+        this.venue.title = this.config.defaultTitle
         this.venue.subline = 'E-Prix'
         this.venue.country = ''
       }
 
-      bus.emit('mounted', this.options)
+      const editor = useEditorStore()
+      editor.registerOptions(this.options)
 
-      bus.on('csvImported', results => {
+      this.$watch(() => editor.csvImport, importResult => {
+        const results = importResult.rows
         this.parseCSV(results)
       })
 
-      bus.on('updatedObjects', options => {
+      this.$watch(() => editor.optionsRevision, () => {
+          const options = editor.options
           if(options.lines < this.objects.length) {
             let diff = this.objects.length - options.lines
             for (var i = 0; i < diff; i++) {
@@ -300,17 +300,23 @@
         }
       },
       persistObjects(objects) {
-        localStorage.setItem('EFormelDrivers', JSON.stringify(objects))
+        localStorage.setItem(this.config.storageKey, JSON.stringify(objects))
       },
       persistVenue(venue) {
-        localStorage.setItem('EFormelDriversVenue', JSON.stringify(venue))
+        localStorage.setItem(this.config.storageKey + 'Venue', JSON.stringify(venue))
       }
     },
     computed: {
+      config() {
+        return rankingVariants[this.variant]
+      },
       cssVars() {
         return {
           '--width': this.width + 'px',
-          '--height': this.height + 'px'
+          '--height': this.height + 'px',
+          '--car-width': this.config.car.width,
+          '--car-height': this.config.car.height,
+          '--car-margin': this.config.car.margin
         }
       }
     }
@@ -458,9 +464,9 @@
     width: 120px;
   }
   .ranking li .car {
-    width: 221px;
-    height: 56px;
-    margin-left: 16px;
+    width: var(--car-width);
+    height: var(--car-height);
+    margin: var(--car-margin);
   }
   .ranking .points {
     background-color: var(--eFormel-100);

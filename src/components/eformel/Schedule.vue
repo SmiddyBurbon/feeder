@@ -74,7 +74,7 @@
 
 <script>
   import { flagSrc, carSrc } from '@/app/assets'
-  import { bus } from '@/app/bus'
+  import { useEditorStore } from '@/stores/editor'
   import { http } from '@/app/http'
   import { getCountry } from '../../assets/js/eformel.js'
 
@@ -133,13 +133,16 @@
         this.venue.country = ''
       }
 
-      bus.emit('mounted', this.options)
+      const editor = useEditorStore()
+      editor.registerOptions(this.options)
 
-      bus.on('csvImported', results => {
+      this.$watch(() => editor.csvImport, importResult => {
+        const results = importResult.rows
         this.parseCSV(results)
       })
 
-      bus.on('updatedObjects', options => {
+      this.$watch(() => editor.optionsRevision, () => {
+          const options = editor.options
           if(options.lines < this.objects.length) {
             let diff = this.objects.length - options.lines
             for (var i = 0; i < diff; i++) {

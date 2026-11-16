@@ -1,65 +1,40 @@
 <template>
   <div id="studio">
-    <Header></Header>
-    <button type="button" id="optionsButton" class="secondary" @click="toggleOptions"><img :src="optionsButton" /></button>
+    <AppHeader></AppHeader>
+    <button type="button" id="optionsButton" class="secondary" @click="toggleSidebar()"><img :src="optionsButton" /></button>
     <div id="editor">
-      <Sidebar id="aside"></Sidebar>
-      <Main></Main>
+      <StudioSidebar id="aside" :class="{ open: sidebarOpen }"></StudioSidebar>
+      <PreviewCanvas></PreviewCanvas>
     </div>
-    <Download></Download>
-    <div id="safariMessage" v-if="this.isSafari()">
+    <ExportButton></ExportButton>
+    <div id="safariMessage" v-if="isSafari">
       <p>Safari might not produce optimal results. We recommend using Chrome or Firefox.</p>
     </div>
   </div>
 </template>
 
 <script>
-  import { bus } from '@/app/bus'
-import Sidebar from './Sidebar.vue'
-import Main from './Main.vue'
-import Download from './Download.vue'
-import Header from './Header.vue'
+import { mapState, mapActions } from 'pinia'
+import { useEditorStore } from '@/stores/editor'
+import StudioSidebar from '@/components/studio/StudioSidebar.vue'
+import PreviewCanvas from '@/components/studio/PreviewCanvas.vue'
+import ExportButton from '@/components/studio/ExportButton.vue'
+import AppHeader from '@/components/AppHeader.vue'
 
 export default {
-  name: 'Studio',
-  components: {
-    Sidebar, Main, Download, Header
-  },
-  data() {
-    return {
-      options: false,
-      optionsButton: '/img/icons/ic_options.svg'
+  name: 'StudioView',
+  components: { StudioSidebar, PreviewCanvas, ExportButton, AppHeader },
+  computed: {
+    ...mapState(useEditorStore, ['sidebarOpen']),
+    optionsButton() {
+      return this.sidebarOpen ? '/img/icons/ic_close.svg' : '/img/icons/ic_options.svg'
+    },
+    isSafari() {
+      return navigator.userAgent.includes('Safari') && !navigator.userAgent.includes('Chrome')
     }
-  },
-  mounted() {
-    var aside = document.getElementById('aside');
-
-    bus.on('showOptions', () => {
-      aside.style.left = 0;
-      this.optionsButton = '/img/icons/ic_close.svg'
-      this.options = true;
-    })
-
-    bus.on('hideOptions', () => {
-      aside.style.left = "-100vw";
-      this.optionsButton = '/img/icons/ic_options.svg'
-      this.options = false;
-    })
   },
   methods: {
-    isSafari() {
-      if (navigator.userAgent.indexOf('Safari') != -1 && navigator.userAgent.indexOf('Chrome') == -1) {
-        return true;
-      }
-    },
-    toggleOptions() {
-        if(this.options) {
-          bus.emit('hideOptions')
-        }
-        else {
-          bus.emit('showOptions')
-        }
-    }
+    ...mapActions(useEditorStore, ['toggleSidebar'])
   }
 }
 </script>
@@ -175,5 +150,8 @@ body {
   #optionsButton {
     display: block;
   }
+}
+#aside.open {
+  left: 0;
 }
 </style>
