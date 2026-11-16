@@ -11,6 +11,9 @@
   import { renderToCanvas } from '@/app/export'
   import { saveAs } from 'file-saver';
 
+  // Exported at twice the layout size (1024px layouts -> 2048px PNG) so text and images stay sharp on high-DPI screens.
+  const EXPORT_SCALE = 2
+
   export default {
     name: 'ExportButton',
     data() {
@@ -48,7 +51,7 @@
         await document.fonts.ready
         await new Promise((resolve) => setTimeout(resolve, 100))
 
-        const rendered = await renderToCanvas(canvas)
+        const rendered = await renderToCanvas(canvas, EXPORT_SCALE)
         rendered.toBlob((blob) => {
           if (blob) saveAs(blob, 'image.png')
         })

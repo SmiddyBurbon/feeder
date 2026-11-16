@@ -2,7 +2,9 @@
 // flag, crest and car image exists. Run with: npm run check:data
 import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { join } from 'node:path'
+import sharp from 'sharp'
 import { seasonSchema, venueAliasesSchema } from '../src/data/schema.ts'
+import { MAX_WIDTH } from './image-limits.ts'
 
 const root = new URL('..', import.meta.url).pathname
 const imageDir = join(root, 'public/img/eformel')
@@ -46,6 +48,17 @@ for (const file of readdirSync(seasonsDir).filter((name) => name.endsWith('.json
   }
   for (const driver of season.drivers) checkImage(isCurrent, 'flags', driver.country, `driver ${driver.name}`)
   for (const venue of season.venues) checkImage(isCurrent, 'flags', venue.country, `venue ${venue.name}`)
+}
+
+console.log('image sizes')
+for (const [folder, maxWidth] of Object.entries(MAX_WIDTH)) {
+  for (const file of readdirSync(join(imageDir, folder)).filter((name) => name.endsWith('.png'))) {
+    const { width = 0 } = await sharp(join(imageDir, folder, file)).metadata()
+    if (width > maxWidth) {
+      warnings++
+      console.warn(`  ! img/eformel/${folder}/${file} is ${width}px wide (max ${maxWidth}); run npm run optimize:images`)
+    }
+  }
 }
 
 console.log('venues.json')

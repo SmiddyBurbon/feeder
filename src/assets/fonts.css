@@ -1,0 +1,17 @@
+/* Self-hosted fonts (no requests to Google). Latin covers Western names, latin-ext e.g. Polish/Czech/Turkish. */
+@import '@fontsource/karla/latin-400.css';
+@import '@fontsource/karla/latin-400-italic.css';
+@import '@fontsource/karla/latin-700.css';
+@import '@fontsource/karla/latin-700-italic.css';
+@import '@fontsource/karla/latin-ext-400.css';
+@import '@fontsource/karla/latin-ext-400-italic.css';
+@import '@fontsource/karla/latin-ext-700.css';
+@import '@fontsource/karla/latin-ext-700-italic.css';
+@import '@fontsource/roboto-condensed/latin-400.css';
+@import '@fontsource/roboto-condensed/latin-400-italic.css';
+@import '@fontsource/roboto-condensed/latin-700.css';
+@import '@fontsource/roboto-condensed/latin-700-italic.css';
+@import '@fontsource/roboto-condensed/latin-ext-400.css';
+@import '@fontsource/roboto-condensed/latin-ext-400-italic.css';
+@import '@fontsource/roboto-condensed/latin-ext-700.css';
+@import '@fontsource/roboto-condensed/latin-ext-700-italic.css';

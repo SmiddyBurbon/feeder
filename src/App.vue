@@ -12,8 +12,6 @@ export default {
 
 <style>
 /* @import './assets/css/style.css'; */
-@import url('https://fonts.googleapis.com/css?family=Karla:400,700,400i,700i&display=swap');
-
 :root {
   --white: #FFF;
   --bg-grey: #F7F7F8;

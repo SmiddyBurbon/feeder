@@ -48,8 +48,6 @@ export default {
 </script>
 
 <style>
-@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:400,400i,700,700i&display=swap');
-
 .menu {
   width: 100vw;
   overflow: scroll;
