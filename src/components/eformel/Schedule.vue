@@ -74,6 +74,8 @@
 
 <script>
   import { flagSrc, carSrc } from '@/app/assets'
+  import { loadStored, saveStored } from '@/app/storage'
+  import { showPickedImage } from '@/app/uploads'
   import { useEditorStore } from '@/stores/editor'
   import { findEntry } from '@/data/match'
   import { loadSeason } from '@/data/seasons'
@@ -116,19 +118,14 @@
       }
     },
     mounted() {
-      if(localStorage.EFormelSchedule) {
-        this.objects = JSON.parse(localStorage.getItem('EFormelSchedule'));
-      }
-      else {
-        this.createList()
-      }
+      const savedObjects = loadStored('EFormelSchedule')
+      if (Array.isArray(savedObjects)) this.objects = savedObjects
+      else this.createList()
 
-      if(localStorage.EFormelScheduleVenue) {
-        this.venue.title = JSON.parse(localStorage.getItem('EFormelSchedule')).title;
-        this.venue.subline = JSON.parse(localStorage.getItem('EFormelSchedule')).subline;
-        this.venue.country = JSON.parse(localStorage.getItem('EFormelSchedule')).country;
-      }
-      else {
+      const savedVenue = loadStored('EFormelScheduleVenue')
+      if (savedVenue) {
+        Object.assign(this.venue, { title: savedVenue.title, subline: savedVenue.subline, country: savedVenue.country })
+      } else {
         this.venue.title = 'Rennkalender'
         this.venue.subline = 'Saison 2022/23'
         this.venue.country = ''
@@ -261,64 +258,16 @@
         this.objects.push(object);
       },
       changeFlag(id) {
-        var file = document.getElementById('flag-input-' + id).files[0];
-        var reader = new FileReader();
-
-        reader.onload = function(readerEvent) {
-          var image = new Image();
-          image.onload = function (/*imageEvent*/) {
-            var max_size = 1200;
-            var w = image.width;
-            var h = image.height;
-
-            if (w > h) {  if (w > max_size) { h*=max_size/w; w=max_size; }
-            } else     {  if (h > max_size) { w*=max_size/h; h=max_size; } }
-
-            var canvas = document.createElement('canvas');
-            canvas.width = w;
-            canvas.height = h;
-            canvas.getContext('2d').drawImage(image, 0, 0, w, h);
-          }
-          image.src = readerEvent.target.result;
-          var img = document.getElementById('item' + id).getElementsByClassName('flag')[0].src = reader.result;
-        }
-
-        if(file){
-          reader.readAsDataURL(file);
-        }
+        showPickedImage('flag-input-' + id, document.querySelector('#item' + id + ' .flag'))
       },
       changeCar(id) {
-        var file = document.getElementById('car-input-' + id).files[0];
-        var reader = new FileReader();
-
-        reader.onload = function(readerEvent) {
-          var image = new Image();
-          image.onload = function (/*imageEvent*/) {
-            var max_size = 1200;
-            var w = image.width;
-            var h = image.height;
-
-            if (w > h) {  if (w > max_size) { h*=max_size/w; w=max_size; }
-            } else     {  if (h > max_size) { w*=max_size/h; h=max_size; } }
-
-            var canvas = document.createElement('canvas');
-            canvas.width = w;
-            canvas.height = h;
-            canvas.getContext('2d').drawImage(image, 0, 0, w, h);
-          }
-          image.src = readerEvent.target.result;
-          var img = document.getElementById('item' + id).getElementsByClassName('car')[0].src = reader.result;
-        }
-
-        if(file){
-          reader.readAsDataURL(file);
-        }
+        showPickedImage('car-input-' + id, document.querySelector('#item' + id + ' .car'))
       },
       persistObjects(objects) {
-        localStorage.setItem('EFormelSchedule', JSON.stringify(objects))
+        saveStored('EFormelSchedule', objects)
       },
       persistVenue(venue) {
-        localStorage.setItem('EFormelScheduleVenue', JSON.stringify(venue))
+        saveStored('EFormelScheduleVenue', venue)
       }
     },
     computed: {

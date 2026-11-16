@@ -14,6 +14,7 @@ npm run build        # Datenprüfung + Typecheck + Build nach dist/
 npm test             # Unit-Tests (Datenmatching, Schema)
 npm run lint
 npm run check:data   # prüft Saison-JSONs und ob alle Flaggen/Autos existieren
+npm run optimize:images  # verkleinert zu große Auto-/Flaggenbilder (nach dem Hinzufügen neuer Liveries)
 ```
 
 ## Struktur
@@ -27,7 +28,8 @@ src/
     landing/        Abschnitte der Landing Page
   stores/editor.ts  Pinia: Optionen, CSV-Import, Sidebar-Zustand
   data/             Saison-Daten, Matching, Rennorte (siehe unten)
-  app/              Hilfsfunktionen (Export, Bilder, Schriften)
+  app/              Hilfsfunktionen (Export, Bilder, Browser-Speicher, Uploads)
+  assets/fonts.css  selbst gehostete Schriften (Karla, Roboto Condensed)
 public/img/eformel/ flags/ (Länder + Team-Wappen), cars/ (Liveries), bg/
 scripts/            check-data.ts
 ```
@@ -53,11 +55,20 @@ oder Umlaute zu achten (`Mueller` und `Muller` finden `Nico Müller`).
    (z. B. `porsche_berlin`), die Bilder müssen nicht mehr umbenannt werden.
 3. Fahrer: `team` verweist auf die `id` eines Teams, `country` auf eine Flagge.
 4. `CURRENT_SEASON_ID` in `src/data/seasons.ts` auf `s14` setzen.
-5. `npm run check:data`. Fehlende Bilder oder falsche Verweise in der aktuellen Saison sind Fehler und stoppen
+5. Neue Auto-/Flaggenbilder einfach in `public/img/eformel/cars|flags` legen und `npm run optimize:images` ausführen
+   (macht sie auf eine sinnvolle Größe klein).
+6. `npm run check:data`. Fehlende Bilder oder falsche Verweise in der aktuellen Saison sind Fehler und stoppen
    auch den Build, bei älteren Saisons nur Warnungen.
+
+## Export
+
+Der PNG-Export rendert in 2-facher Größe (1024-px-Layout wird zu 2048 px). Eingabefelder werden dafür im Export
+durch normalen Text ersetzt (`src/app/export.ts`), weil html2canvas sie sonst ohne Großschreibung und falsch
+ausgerichtet zeichnet.
 
 ## Bekannte Altlasten
 
-- `Quali` und die Demo lesen noch `public/json/eformel_202223.json` bzw. `eformel_202021.json` (altes Format).
+- Die Demo liest noch `public/json/eformel_202021.json` (altes Format).
+- `public/img/eformel/drivers` und `bg` werden vom Code nicht mehr benutzt.
 - Die Demo-Tabelle nutzt TheSportsDB, das inzwischen einen Premium-Key verlangt.
 - Im Eformel-Menü fehlen Vorschaubilder für Fahrerwertung, Teamwertung und Rennkalender.
