@@ -97,7 +97,6 @@
 
       this.$watch(() => editor.colors, colors => {
         if (!colors) return
-        console.log(colors)
         this.options.colors.primary = colors.primary
         this.options.colors.secondary = colors.secondary
       })

@@ -1,5 +1,4 @@
 export function getClub(team) {
-  console.log(team)
   var club = team.toLowerCase();
   
 

@@ -167,7 +167,6 @@
           this.objects[i].goaldiff = response.data.table[i].intGoalDifference
           this.objects[i].points = response.data.table[i].intPoints
         }
-        console.log(this.objects)
       },
       updateName(i, name) {
         this.objects[i].logo = getClub(name)

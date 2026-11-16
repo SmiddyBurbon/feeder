@@ -192,7 +192,6 @@
             }
           }
         }
-        console.log(this.objects)
       },
       setCountry(venue) {
         this.venue.country = countryForVenue(venue)

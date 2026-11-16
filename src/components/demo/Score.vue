@@ -101,7 +101,6 @@
     },
     methods: {
       updateName(team, name) {
-        console.log(team)
         team.logo = getClub(name)
         team.name = name
       },

@@ -6,7 +6,7 @@
         <li>
           <router-link to="studio?type=eformel_results">
             <div class="thumb">
-              <img src="/img/eformel/preview/results.png" />
+              <img src="/img/eformel/preview/results.webp" />
             </div>
             <span>Ergebnisse</span>
           </router-link>

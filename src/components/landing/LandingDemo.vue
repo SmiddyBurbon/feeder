@@ -4,10 +4,6 @@
 
     <div class="container">
       <img src="@/assets/img/feeder_2x.gif" alt="feeder" />
-      <!--<video controls autoplay>
-        <source src="@/assets/img/feeder.mp4" type="video/mp4">
-        Your browser does not support the video tag.
-      </video>-->
     </div>
   </section>
 </template>
