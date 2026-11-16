@@ -1,0 +1,290 @@
+[  
+  {
+    "number": 0,
+    "name": "Jaguar TCS Racing",
+    "tla": "jaguar",
+    "nationality": "jaguar",
+    "team": "jaguar",
+    "fullTeam": "Jaguar TCS Racing"
+  },
+  {
+    "number": 0,
+    "name": "Andretti",
+    "tla": "andretti",
+    "nationality": "andretti",
+    "team": "andretti",
+    "fullTeam": "Andretti"
+  },
+  {
+    "number": 0,
+    "name": "Nissan",
+    "tla": "nissan",
+    "nationality": "nissan",
+    "team": "nissan",
+    "fullTeam": "Nissan"
+  },
+  {
+    "number": 0,
+    "name": "Porsche",
+    "tla": "porsche",
+    "nationality": "porsche",
+    "team": "porsche",
+    "fullTeam": "Porsche"
+  },
+  {
+    "number": 0,
+    "name": "Paysafe Envision",
+    "tla": "envision",
+    "nationality": "envision",
+    "team": "envision",
+    "fullTeam": "Paysafe Envision"
+  },
+  {
+    "number": 0,
+    "name": "Cupra Kiro",
+    "tla": "kiro",
+    "nationality": "kiro",
+    "team": "kiro",
+    "fullTeam": "Cupra Kiro"
+  },
+  {
+    "number": 0,
+    "name": "Mahindra Racing",
+    "tla": "mahindra",
+    "nationality": "mahindra",
+    "team": "mahindra",
+    "fullTeam": "Mahindra Racing"
+  },
+  {
+    "number": 0,
+    "name": "Citroen Racing",
+    "tla": "citroen",
+    "nationality": "citroen",
+    "team": "citroen",
+    "fullTeam": "Citroen Racing"
+  },
+  {
+    "number": 0,
+    "name": "Lola",
+    "tla": "lola",
+    "nationality": "lola",
+    "team": "lola",
+    "fullTeam": "Lola"
+  },
+  {
+    "number": 0,
+    "name": "Opel GSE",
+    "tla": "opel",
+    "nationality": "opel",
+    "team": "opel",
+    "fullTeam": "Opel GSE"
+  },
+  {
+    "number": 0,
+    "name": "Fusion",
+    "tla": "fusion",
+    "nationality": "fusion",
+    "team": "fusion",
+    "fullTeam": "Fusion"
+  },
+  {
+    "number": 0,
+    "name": "Fortescue Zero Racing",
+    "tla": "fortescue",
+    "nationality": "fortescue",
+    "team": "fortescue",
+    "fullTeam": "Fortescue Zero Racing"
+  },
+  {
+    "number": 13,
+    "name": "Antonio Felix da Costa",
+    "tla": "DAC",
+    "nationality": "pt",
+    "team": "jaguar",
+    "fullTeam": "Jaguar TCS Racing"
+  },
+  {
+    "number": 5,
+    "name": "Stoffel Vandoorne",
+    "tla": "VAN",
+    "nationality": "be",
+    "team": "jaguar",
+    "fullTeam": "Jaguar TCS Racing"
+  },
+  {
+    "number": 27,
+    "name": "Jake Dennis",
+    "tla": "DEN",
+    "nationality": "uk",
+    "team": "andretti",
+    "fullTeam": "Andretti"
+  },
+  {
+    "number": 28,
+    "name": "Felipe Drugovich",
+    "tla": "DRU",
+    "nationality": "br",
+    "team": "andretti",
+    "fullTeam": "Andretti"
+  },
+  {
+    "number": 23,
+    "name": "Oliver Rowland",
+    "tla": "ROW",
+    "nationality": "uk",
+    "team": "nissan",
+    "fullTeam": "Nissan"
+  },
+  {
+    "number": 22,
+    "name": "Zane Maloney",
+    "tla": "MAL",
+    "nationality": "bb",
+    "team": "nissan",
+    "fullTeam": "Nissan"
+  },
+  {
+    "number": 1,
+    "name": "Pascal Wehrlein",
+    "tla": "WEH",
+    "nationality": "de",
+    "team": "porsche",
+    "fullTeam": "Porsche"
+  },
+  {
+    "number": 51,
+    "name": "Nico Müller",
+    "tla": "MUL",
+    "nationality": "ch",
+    "team": "porsche",
+    "fullTeam": "Porsche"
+  },
+  {
+    "number": 7,
+    "name": "Maximilian Günther",
+    "tla": "GUN",
+    "nationality": "de",
+    "team": "envision",
+    "fullTeam": "Paysafe Envision"
+  },
+  {
+    "number": 15,
+    "name": "Zak O'Sullivan",
+    "tla": "OSU",
+    "nationality": "uk",
+    "team": "envision",
+    "fullTeam": "Paysafe Envision"
+  },
+  {
+    "number": 3,
+    "name": "Pepe Marti",
+    "tla": "MAR",
+    "nationality": "es",
+    "team": "kiro",
+    "fullTeam": "Cupra Kiro"
+  },
+  {
+    "number": 33,
+    "name": "Jake Hughes",
+    "tla": "HUG",
+    "nationality": "uk",
+    "team": "kiro",
+    "fullTeam": "Cupra Kiro"
+  },
+  {
+    "number": 21,
+    "name": "Nyck de Vries",
+    "tla": "DEV",
+    "nationality": "nl",
+    "team": "mahindra",
+    "fullTeam": "Mahindra Racing"
+  },
+  {
+    "number": 48,
+    "name": "Edoardo Mortara",
+    "tla": "MOR",
+    "nationality": "ch",
+    "team": "mahindra",
+    "fullTeam": "Mahindra Racing"
+  },
+  {
+    "number": 25,
+    "name": "Jean-Eric Vergne",
+    "tla": "JEV",
+    "nationality": "fr",
+    "team": "citroen",
+    "fullTeam": "Citroen Racing"
+  },
+  {
+    "number": 37,
+    "name": "Nick Cassidy",
+    "tla": "CAS",
+    "nationality": "nz",
+    "team": "citroen",
+    "fullTeam": "Citroen Racing"
+  },
+  {
+    "number": 35,
+    "name": "Robert Shwartzman",
+    "tla": "SHW",
+    "nationality": "il",
+    "team": "lola",
+    "fullTeam": "Lola"
+  },
+  {
+    "number": 11,
+    "name": "Enzo Fittipaldi",
+    "tla": "FIT",
+    "nationality": "br",
+    "team": "lola",
+    "fullTeam": "Lola"
+  },
+  {
+    "number": 4,
+    "name": "Mitch Evans",
+    "tla": "EVA",
+    "nationality": "nz",
+    "team": "opel",
+    "fullTeam": "Opel GSE"
+  },
+  {
+    "number": 12,
+    "name": "Theo Pourchaire",
+    "tla": "POU",
+    "nationality": "fr",
+    "team": "opel",
+    "fullTeam": "Opel GSE"
+  },
+  {
+    "number": 26,
+    "name": "Taylor Barnard",
+    "tla": "BAR",
+    "nationality": "uk",
+    "team": "fusion",
+    "fullTeam": "Fusion"
+  },
+  {
+    "number": 90,
+    "name": "Ayhancan Güven",
+    "tla": "GUV",
+    "nationality": "tr",
+    "team": "fusion",
+    "fullTeam": "Fusion"
+  },
+  {
+    "number": 20,
+    "name": "Dan Ticktum",
+    "tla": "TIC",
+    "nationality": "uk",
+    "team": "fortescue",
+    "fullTeam": "Fortescue Zero Racing"
+  },
+  {
+    "number": 99,
+    "name": "TBA",
+    "tla": "TBA",
+    "nationality": "au",
+    "team": "fortescue",
+    "fullTeam": "Fortescue Zero Racing"
+  }
+]
